@@ -46,6 +46,11 @@ Available commands
 | yarn prettier:format   | Format all `rb` and `erb` files  |
 | yarn prettier:check    | Check prettier format            |
 
+## Environment
+
+- [Production](https://gamou.herokuapp.com/)
+- [Staging](https://stg1-gamou.herokuapp.com/)
+
 ## Recommended extensions for VSCode
 
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
