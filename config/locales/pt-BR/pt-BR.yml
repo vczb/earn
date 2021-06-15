@@ -224,6 +224,7 @@ pt-BR:
 
   web:
     title: Gamou - Programa de fidelidade
+    close: Fechar
     enterprise:
       name: Gamou
     header:
