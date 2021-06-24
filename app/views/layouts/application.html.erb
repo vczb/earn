@@ -9,9 +9,11 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'https://rsms.me/inter/inter.css' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
   <body>
-    <%= render 'layouts/message' %>
+    <%= render 'shared/symbols' %>
+    <%= render 'shared/message' %>
     <%= render 'shared/header' %>
     <%= yield %>
     <%= render 'shared/footer' %>

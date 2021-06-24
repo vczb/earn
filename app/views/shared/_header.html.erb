@@ -1,24 +1,67 @@
-<nav class="top-0 absolute z-30 w-full flex flex-wrap items-center justify-between px-2 py-3">
+<nav class="mt-4 absolute z-30 w-full flex flex-wrap items-center justify-between px-2 py-3">
   <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
-    <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-      <a class="text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase" href="/">
-        <%= t 'web.enterprise.name' %>
+    <input type="checkbox" class="hidden" id="menu-mobile">
+    <div class="w-full relative flex justify-between items-center">
+      <a class="relative text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase" href="/">
+        <svg
+          class="h-12 w-52 absolute top-0 transform -translate-y-2/4"
+          aria-label="<%= t 'web.enterprise.name' %>"
+          title="Logo <%= t 'web.enterprise.name' %>" >
+          <use xlink:href="#logo_white" />
+        </svg>
       </a>
-      <button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button">
-        <i class="text-white fas fa-bars"></i>
-      </button>
-    </div>
-    <div class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden" id="example-navbar-warning">
-      <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-        <% unless ['sessions', 'registrations', 'passwords'].include? controller_name  %>
-          <li class="flex items-center">
-            <a class="btn-primary btn-small" href="/users/sign_in">
-              <i class="fas fa-sign-in-alt"></i>
-              <%= t 'web.header.login' %>
-            </a>
-          </li>
+      <% if user_signed_in? %>
+        <label
+        class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block outline-none focus:outline-none"
+        role="button"
+        for="menu-mobile"
+        >
+          <i class="text-white fas fa-bars"></i>
+        </label>
+      <% else %>
+        <% unless ['sessions', 'registrations', 'passwords'].include? controller_name %>
+          <a class="btn-primary btn-small" href="/users/sign_in">
+            <i class="fas fa-sign-in-alt"></i>
+            <%= t 'web.header.login' %>
+          </a>
         <% end %>
-      </ul>
+      <% end %>
     </div>
+    <div
+      class="flex-grow items-center bg-white lg:ml-auto lg:mr-4 lg:max-w-xs"
+      id="menu-list"
+    >
+      <ul class="flex flex-col list-none">
+        <% if user_signed_in? %>
+          <ul class="flex flex-col list-none">
+            <li class="flex items-center">
+              <a title="<%= t 'web.header.account' %>" class="text-blueGray-700 px-3 py-4 flex items-center text-xs uppercase font-bold" href="#">
+                <i class="text-blueGray-400 fas fa-user-circle text-lg leading-lg "></i>
+                <span class="inline-block ml-2">
+                  <%= t 'web.header.account' %>
+                </span>
+              </a>
+            </li>
+            <li class="flex items-center">
+              <a title="<%= t 'web.header.dashboard' %>" class="text-blueGray-700 px-3 py-4 flex items-center text-xs uppercase font-bold" href="#">
+                <i class="text-blueGray-400 fas fa-chart-line text-lg leading-lg "></i>
+                <span class="inline-block ml-2">
+                  <%= t 'web.header.dashboard' %>
+                </span>
+              </a>
+            </li>
+            <li class="flex items-center">
+              <a title="<%= t 'web.header.logout' %>" rel="nofollow" data-method="delete" href="/en/users/sign_out" class="text-blueGray-700 px-3 py-4 flex items-center text-xs uppercase font-bold" >
+                <i class="text-blueGray-400 fas fa-sign-out-alt text-lg leading-lg "></i>
+                <span class="inline-block ml-2">
+                  <%= t 'web.header.logout' %>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      <% end %>
+    </ul>
   </div>
+</div>
 </nav>

@@ -229,6 +229,9 @@ pt-BR:
       name: Gamou
     header:
       login: Entrar
+      logout: Sair
+      account: Minha conta
+      dashboard: Painel de controle
     footer:
       title: Vamos manter contato!
       subtitle: Encontre-nos em qualquer uma dessas plataformas.

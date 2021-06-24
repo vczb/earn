@@ -69,6 +69,17 @@ form {
   }
 }
 
+/* MENU MOBILE */
+
+#menu-list {
+  @apply opacity-0 pointer-events-none;
+  transition: all 0.3s ease-in-out;
+}
+
+#menu-mobile:checked ~ #menu-list {
+  @apply opacity-100 pointer-events-auto;
+}
+
 /*FLASH BANNERS*/
 
 .flash-banner {

@@ -38,6 +38,9 @@ en:
       name: Gamou
     header:
       login: Login
+      logout: Logout
+      account: My Account
+      dashboard: Dashboard
     footer:
       title: Let's keep in touch!
       subtitle: Find us on any of these platforms.
