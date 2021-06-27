@@ -31,6 +31,39 @@
 
 en:
   hello: 'Hello world'
+  money:
+    currency: USD$
+  calendar:
+    week:
+      title: Week
+      monday:
+        title: Monday
+        short_title: Mon
+        large_title: Monday
+      tuesday:
+        title: Tuesday
+        short_title: Tue
+        large_title: Tuesday
+      wednesday:
+        title: Wednesday
+        short_title: Wed
+        large_title: Wednesday
+      thursday:
+        title: Thursday
+        short_title: Thu
+        large_title: Thursday
+      friday:
+        title: Friday
+        short_title: Fri
+        large_title: Friday
+      saturday:
+        title: Saturday
+        short_title: Sat
+        large_title: Saturday
+      sunday:
+        title: Sunday
+        short_title: Sun
+        large_title: Sunday
   web:
     title: Gamou - Fidelity program
     close: Close
@@ -132,3 +165,13 @@ en:
           third:
             title: Frequent updates
             subtitle: Elementum nibh tellus molestie nunc. Malesuada fames ac eget aliquet viverra tellus in hac.
+    dashboard:
+      diamonds: Diamonds
+      sales: Sales
+      today:
+        sales: Today's sales
+        diamonds: Today's diamonds
+        customers: Today's customers
+        products: Redeemed products
+        new_customers: New customers
+        returning_customers: Recurring customers

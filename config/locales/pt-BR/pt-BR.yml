@@ -221,7 +221,39 @@ pt-BR:
       long: '%d de %B de %Y, %H:%M'
       short: '%d de %B, %H:%M'
     pm: ''
-
+  money:
+    currency: R$
+  calendar:
+    week:
+      title: Semana
+      monday:
+        title: Segunda
+        short_title: Seg
+        large_title: Segunda-feira
+      tuesday:
+        title: Terça
+        short_title: Ter
+        large_title: Terça-feira
+      wednesday:
+        title: Quarta
+        short_title: Qua
+        large_title: Quarta-feira
+      thursday:
+        title: Quinta
+        short_title: Qui
+        large_title: Quinta-feira
+      friday:
+        title: Sexta
+        short_title: Sex
+        large_title: Sexta-feira
+      saturday:
+        title: Sábado
+        short_title: Sáb
+        large_title: Sábado
+      sunday:
+        title: Domingo
+        short_title: Dom
+        large_title: Domingo
   web:
     title: Gamou - Programa de fidelidade
     close: Fechar
@@ -323,3 +355,13 @@ pt-BR:
           third:
             title: Atualizações frequentes
             subtitle: Elementum nibh tellus molestie nunc. Malesuada fames ac eget aliquet viverra tellus in hac.
+    dashboard:
+      diamonds: Diamantes
+      sales: Vendas
+      today:
+        sales: Vendas de hoje
+        diamonds: Diamantes de hoje
+        customers: Clientes de hoje
+        products: Produtos resgatados
+        new_customers: Novos clientes
+        returning_customers: Clientes recorrentes
