@@ -1,4 +1,4 @@
-# GAMOU
+# GAMOU 2
 
 Gamou is a project developed in Ruby on Rails fully open source that aims to stimulate trade through a gamification system.
 
