@@ -1,11 +1,11 @@
+require 'nested_form/engine'
+require 'nested_form/builder_mixin'
 RailsAdmin.config do |config|
   ### Popular gems integration
 
   ## == Devise ==
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
-  # config.current_user_method(&:current_user)
+  config.authenticate_with { warden.authenticate! scope: :user }
+  config.current_user_method(&:current_user)
 
   ## == CancanCan ==
   # config.authorize_with :cancancan
@@ -22,7 +22,10 @@ RailsAdmin.config do |config|
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar = true
 
-  config.main_app_name = ['Gamou']
+  config.main_app_name = [
+    Rails.application.engine_name.titleize.chomp(' Application'),
+    'Admin'
+  ]
 
   config.actions do
     dashboard # mandatory
