@@ -9,5 +9,7 @@ Rails
 
       get 'admin', to: 'admin/dashboard#index'
       get 'dashboard', to: 'dashboard#index'
+
+      resources :customers
     end
   end
