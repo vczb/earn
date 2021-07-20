@@ -10,4 +10,5 @@ Rails
       get 'admin', to: 'admin/dashboard#index'
       get 'dashboard', to: 'dashboard#index'
     end
+    resources :customers, only: %i[index create update]
   end
