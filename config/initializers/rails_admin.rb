@@ -88,4 +88,18 @@ RailsAdmin.config do |config|
       end
     end
   end
+
+  config.model 'Product' do
+    edit do
+      field :name
+      field :price_in_cents
+      field :image
+      field :short_description
+      field :description
+      field :user_id do
+        read_only true
+        pretty_value { bindings[:controller].current_user.id }
+      end
+    end
+  end
 end
