@@ -60,9 +60,7 @@ RailsAdmin.config do |config|
       field :gender
       field :cpf
       field :birthday
-      field :user do
-        pretty_value { value.email }
-      end
+      field :user
     end
     list do
       field :name
@@ -71,9 +69,7 @@ RailsAdmin.config do |config|
       field :gender
       field :cpf
       field :birthday
-      field :user do
-        pretty_value { value.email }
-      end
+      field :user
     end
     edit do
       field :name
@@ -82,10 +78,7 @@ RailsAdmin.config do |config|
       field :gender
       field :cpf
       field :birthday
-      field :user_id do
-        read_only true
-        pretty_value { bindings[:controller].current_user.id }
-      end
+      field :user
     end
   end
 
@@ -96,10 +89,7 @@ RailsAdmin.config do |config|
       field :image
       field :short_description
       field :description
-      field :user_id do
-        read_only true
-        pretty_value { bindings[:controller].current_user.id }
-      end
+      field :user
     end
   end
 end
