@@ -1,35 +1,64 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
-
-    <%= f.input :password,
-                hint: "leave it blank if you don't want to change it",
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :current_password,
-                hint: "we need your current password to confirm your changes",
+<main id="edit_user">
+  <section class="w-full h-full bg-blueGray-800">
+    <div class="relative pt-32 pb-32 flex content-center items-center justify-center" >
+      <div class="w-full lg:w-4/12 px-4" >
+        <div class="relative flex flex-col min-w-0 break-words w-full mt-10 mb-10  p-5 shadow-lg rounded-lg bg-blueGray-200">
+          <h2 class="text-2xl font-semibold text-center text-blueGray-700 mb-5" >
+            <%= t 'verbs.edit'  %>
+          </h2>
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+            <%= f.error_notification %>
+            <div class="form-group">
+              <%= f.input :email,
                 required: true,
-                input_html: { autocomplete: "current-password" } %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+                autofocus: true,
+                label_html: { class: "form-label label-small" },
+                input_html: { autocomplete: "email", class: 'form-text' } %>
+            </div>
+            <div class="form-group">
+              <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+              <% end %>
+            </div>
+            <div class="form-group">
+              <%= f.input :company_name,
+                required: true,
+                label_html: { class: "form-label label-small" },
+                input_html: { class: 'form-text'  } %>
+            </div>
+            <div class="form-group">
+              <%= f.input :owner_name,
+                required: true,
+                label_html: { class: "form-label label-small" },
+                input_html: { class: 'form-text' } %>
+            </div>
+            <div class="form-group">
+              <%= f.input :phone,
+                required: true,
+                label_html: { class: "form-label label-small" },
+                input_html: { class: 'form-text'  } %>
+            </div>
+            <% price = current_user.diamond_price_in_cents / 100 %>
+            <div class="form-group">
+              <%= f.input :diamond_price_in_cents,
+                required: true,
+                label_html: { class: "form-label label-small" },
+                input_html: { class: 'form-text' , :value => price } %>
+            </div>
+            <div class="form-group">
+              <p class="leading-relaxed mt-1 mb-4 text-blueGray-500">
+                <% plan = 'web.user.plan.' + current_user.plan + '.title' %>
+                <%= I18n.t plan %>
+              </p>
+            </div>
+            <div class="form-group">
+              <%= f.button :submit, I18n.t('verbs.confirm'),
+              class: "btn btn-medium btn-dark w-full"  %>
+            </div>
+          <% end %>
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

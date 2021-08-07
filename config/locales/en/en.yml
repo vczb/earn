@@ -113,6 +113,9 @@ en:
     other:
       title: Other
       short_title: Other
+  verbs:
+    confirm: Confirm
+    edit: Edit
   web:
     title: Gamou - Fidelity program
     close: Close
@@ -192,15 +195,19 @@ en:
           trial:
             title: Free
             subtitle: 30 days
+            full_name: Trial plan
           monthly:
             title: US$ 50,00
             subtitle: Monthly
+            full_name: Monthly plan
           semester:
             title: US$ 30,00
             subtitle: Semester
+            full_name: Semester plan
           yearly:
             title: US$ 25,00
             subtitle: Yearly
+            full_name: Yearly plan
       innovation:
         title: Modern technologies
         subtitle: Vel turpis nunc eget lorem dolor sed. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae. Tempus egestas sed sed risus pretium. Pulvinar pellentesque habitant morbi tristique senectus et netus et.
@@ -230,3 +237,13 @@ en:
       customers: Customers
       gender: Gender
       age: Age
+    user:
+      plan:
+        trial:
+          title: Trial plan
+        monthly:
+          title: Monthly plan
+        semester:
+          title: Semester plan
+        yearly:
+          title: Yearly plan
