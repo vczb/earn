@@ -145,7 +145,7 @@ en:
     form:
       contact:
         title: Want to send a message?
-        subtitle: Dui ut ornare lectus sit amet est placerat.
+        subtitle: We respond within 48 hours.
         cta:
           title: Send Message
         name:
@@ -159,37 +159,37 @@ en:
           placeholder: Enter a message...
     home:
       banner:
-        title: Loyalty has never been so easy
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi quis commodo odio aenean sed. Nisl purus in mollis nunc sed id.
+        title: Solution to retain your customers and generate new sales
+        subtitle: The Gamou system has several features so you can create discount coupons, your customers earn points with every purchase and direct communication without using social networks.
       advantages:
         first:
-          title: Conquer
-          subtitle: Lacinia quis vel eros donec ac odio tempor orci. Enim nec dui nunc mattis enim ut tellus. Ultrices vitae auctor bibendum.
+          title: Coupons
+          subtitle: Gamou has a feature to generate discount coupons and release them at the time of purchase for your customer.
         second:
-          title: Retain
-          subtitle: In mollis nunc sed id semper. Cursus metus aliquam eleifend mi in nulla. Est lorem ipsum dolor sit amet.
+          title: Points
+          subtitle: When making any purchase, the customer already receives points in their registration with the location. As soon as you add an amount, you can exchange it for some product or service.
         third:
-          title: Loyalize
-          subtitle: Sed risus ultricies tristique nulla aliquet enim tortor at. Velit ut tortor pretium viverra suspendisse potenti nullam.
+          title: Discounts
+          subtitle: Discounts are created by the location and it is possible to receive discounts at the time of purchase without consulting anything. At the time of purchase it already releases.
       relationship:
-        title: Relationship with the customer base
+        title: Maintain loyalty with your customers
         subtitle:
-          first: Ornare massa eget egestas purus viverra accumsan in. Odio euismod lacinia at quis risus sed vulputate.
-          second: Id donec ultrices tincidunt arcu non sodales neque sodales ut. Vitae aliquet nec ullamcorper sit.
+          first: With Gamou you will be able to communicate with your customers directly and generate a lot of relationship with your customers.
+          second: What information do your customer have? In most businesses, none.
         cta: I want to know more
       real_time:
-        title: Follow in real time
-        subtitle: Quis auctor elit sed vulputate mi. Donec pretium vulputate sapien nec. Nulla pellentesque dignissim enim sit amet venenatis urna.
+        title: Easy to use and hassle free
+        subtitle: The system is simple and easy to use, with no hassle to create actions. The customer makes a quick registration and can now receive discounts and discount coupons.
       automated:
-        title: Complete and Automated
-        subtitle: Fusce id velit ut tortor pretium viverra suspendisse potenti. Ultrices in iaculis nunc sed augue lacus viverra vitae congue.
+        title: Registration of products or services
+        subtitle: At Gamou you can register your products and create a catalog or product menu.
         functionalities:
-          first: Easy to use
-          second: Control panel
-          third: Access from anywhere
+          first: Place order via system
+          second: Apply loyalty score when making payment
+          third: Apply discounts and coupons
       our_plans:
-        title: Meet our plans
-        subtitle: At elementum eu facilisis sed odio morbi quis commodo odio. Cras pulvinar mattis nunc sed blandit. Ut placerat orci nulla pellentesque dignissim.
+        title: Plans
+        subtitle: Below is the evolution path of your journey in Gamou. We want to help you grow.
         plans:
           go: Access
           trial:
@@ -205,18 +205,18 @@ en:
             title: US$ 25,00
             subtitle: Yearly
       innovation:
-        title: Modern technologies
-        subtitle: Vel turpis nunc eget lorem dolor sed. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae. Tempus egestas sed sed risus pretium. Pulvinar pellentesque habitant morbi tristique senectus et netus et.
+        title: About technology
+        subtitle: Gamou uses the latest in technology. According to your business grows, the system also grows to always deliver value to your business.
         seals:
           first:
-            title: Certified product
-            subtitle: Integer vitae justo eget magna fermentum ac auctor augue mauris augue neque grasvda.
+            title: Privacy
+            subtitle: Only information that customers allow will be shown. When registering, some questionnaires are carried out.
           second:
-            title: Data security
-            subtitle: Faucibus nisl tincidunt eget nullam non nisi viverra accumsan in nisl nisi scelerisque.
+            title: Safety
+            subtitle: The database is encrypted, ensuring information security.
           third:
-            title: Frequent updates
-            subtitle: Elementum nibh tellus molestie nunc. Malesuada fames ac eget aliquet viverra tellus in hac.
+            title: Cloud
+            subtitle: You can work wherever you want without any problems. All information is recorded on the servers.
     dashboard:
       diamonds: Diamonds
       sales: Sales

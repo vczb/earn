@@ -335,7 +335,7 @@ pt-BR:
     form:
       contact:
         title: Quer mandar uma mensagem ?
-        subtitle: Dui ut ornare lectus sit amet est placerat.
+        subtitle: Respondemos em até 48 horas.
         cta:
           title: Enviar mensagem
         name:
@@ -349,37 +349,37 @@ pt-BR:
           placeholder: Digite uma mensagem...
     home:
       banner:
-        title: Fidelizar nunca foi tão fácil
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi quis commodo odio aenean sed. Nisl purus in mollis nunc sed id.
+        title: Solução para fidelizar o seus clientes e gerar novas vendas
+        subtitle: O sistema Gamou tem diversos recursos para que possa criar cupons de descontos, seus clientes ganham pontos em cada compra e uma comunicação direta sem usar redes sociais.
       advantages:
         first:
-          title: Conquiste
-          subtitle: Lacinia quis vel eros donec ac odio tempor orci. Enim nec dui nunc mattis enim ut tellus. Ultrices vitae auctor bibendum.
+          title: Cupons
+          subtitle: O Gamou possui recurso para gerar cupons de descontos e liberar no momento da compra para o seu cliente.
         second:
-          title: Retenha
-          subtitle: In mollis nunc sed id semper. Cursus metus aliquam eleifend mi in nulla. Est lorem ipsum dolor sit amet.
+          title: Pontos
+          subtitle: Ao realizar qualquer compra o cliente já recebe pontos no seu cadastro com o local. Assim que somar uma quantidade pode trocar por algum produto ou serviço.
         third:
-          title: Fidelize
-          subtitle: Sed risus ultricies tristique nulla aliquet enim tortor at. Velit ut tortor pretium viverra suspendisse potenti nullam.
+          title: Descontos
+          subtitle: Os descontos são criados pelo local e é possível receber os descontos na hora da compra sem consultar nada. No momento da compra já libera.
       relationship:
-        title: Relacionamento com a base de clientes
+        title: Mantenha a fidelidade com seus clientes
         subtitle:
-          first: Ornare massa eget egestas purus viverra accumsan in. Odio euismod lacinia at quis risus sed vulputate.
-          second: Id donec ultrices tincidunt arcu non sodales neque sodales ut. Vitae aliquet nec ullamcorper sit.
+          first: Com o Gamou conseguirá se comunicar com os seus clientes de forma direta e gerando muito relacionamento com os seus clientes.
+          second: Quais informações do seu cliente tens? Na maioria dos negócios, nenhuma.
         cta: Quero saber mais
       real_time:
-        title: Acompanhe em tempo real
-        subtitle: Quis auctor elit sed vulputate mi. Donec pretium vulputate sapien nec. Nulla pellentesque dignissim enim sit amet venenatis urna.
+        title: Fácil de usar e sem complicações
+        subtitle: O sistema é simples e fácil de usar, sem complicações para criar ações. O cliente faz um cadastro rápido e já pode receber descontos e cupons de descontos.
       automated:
-        title: Completa e Automatizada
-        subtitle: Fusce id velit ut tortor pretium viverra suspendisse potenti. Ultrices in iaculis nunc sed augue lacus viverra vitae congue.
+        title: Cadastro de produtos ou serviços
+        subtitle: No Gamou poderá cadastrar seus produtos e criar um catálogo ou cardápio de produtos.
         functionalities:
-          first: Fácil de usar
-          second: Painel de controle
-          third: Acesse de qualquer lugar
+          first: Realizar pedido via sistema
+          second: Aplicar pontuação de fidelidade ao realizar o pagamento
+          third: Aplicar descontos e cupons
       our_plans:
-        title: Conheça nossos planos
-        subtitle: At elementum eu facilisis sed odio morbi quis commodo odio. Cras pulvinar mattis nunc sed blandit. Ut placerat orci nulla pellentesque dignissim.
+        title: Planos
+        subtitle: Abaixo a trilha de evolução da sua jornada no Gamou. Queremos te ajudar a crescer.
         plans:
           go: Acessar
           trial:
@@ -395,18 +395,18 @@ pt-BR:
             title: R$ 25,00
             subtitle: Anual
       innovation:
-        title: Tecnologia de ponta
-        subtitle: Vel turpis nunc eget lorem dolor sed. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae. Tempus egestas sed sed risus pretium. Pulvinar pellentesque habitant morbi tristique senectus et netus et.
+        title: Sobre a tecnologia
+        subtitle: O Gamou utiliza o que tem de mais atual em tecnologia. Conforme o seu negócio cresce, o sistema cresce também para sempre entregar valor ao seu negócio.
         seals:
           first:
-            title: Produto certificado
-            subtitle: Integer vitae justo eget magna fermentum ac auctor augue mauris augue neque grasvda.
+            title: Privacidade
+            subtitle: Só será mostrado informações que os clientes permitirem. Ao realizar o cadastro é realizado alguns questionários.
           second:
-            title: Segurança de dados
-            subtitle: Faucibus nisl tincidunt eget nullam non nisi viverra accumsan in nisl nisi scelerisque.
+            title: Segurança
+            subtitle: O banco de dados é criptografado, garantindo a segurança das informações.
           third:
-            title: Atualizações frequentes
-            subtitle: Elementum nibh tellus molestie nunc. Malesuada fames ac eget aliquet viverra tellus in hac.
+            title: Nuvem
+            subtitle: Poderá trabalhar da onde quiser sem problemas. Todas as informações são gravadas nos servidores.
     dashboard:
       diamonds: Diamantes
       sales: Vendas
