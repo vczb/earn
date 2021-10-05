@@ -16,6 +16,23 @@
                 input_html: { autocomplete: "email", class: 'form-text' } %>
             </div>
             <div class="form-group">
+              <%= f.input :password,
+                label_html: { class: "form-label label-small" },
+                input_html: { autocomplete: "new-password", class: 'form-text'  } %>
+            </div>
+            <div class="form-group">
+              <%= f.input :password_confirmation,
+                label_html: { class: "form-label label-small" },
+                input_html: { autocomplete: "new-password",  class: 'form-text' } %>
+            </div>
+            <div class="form-group">
+              <%= f.input :current_password,
+              required: true,
+              label_html: { class: "form-label label-small" },
+              input_html: { autocomplete: "current-password", class: 'form-text' } %>
+              <i class="form-label label-small my-1">(we need your current password to confirm your changes)</i>
+            </div>
+            <div class="form-group">
               <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
                 <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
               <% end %>
@@ -24,7 +41,7 @@
               <%= f.input :company_name,
                 required: true,
                 label_html: { class: "form-label label-small" },
-                input_html: { class: 'form-text'  } %>
+                input_html: { class: 'form-text' } %>
             </div>
             <div class="form-group">
               <%= f.input :owner_name,

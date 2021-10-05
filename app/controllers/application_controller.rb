@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-
   before_action :set_locale
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
   private
 
@@ -14,4 +14,9 @@ class ApplicationController < ActionController::Base
     logger.debug "default_url_options is passed options: #{options.inspect}\n"
     { locale: I18n.locale }
   end
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:account_update, keys: [:company_name, :owner_name, :phone, :diamond_price_in_cents])
+  end
+
 end
