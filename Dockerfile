@@ -13,6 +13,16 @@ RUN apt update
 RUN apt list --upgradable
 RUN apt install -y yarn
 
+# Add Chrome source
+RUN curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" | tee /etc/apt/sources.list.d/google-chrome.list
+
+RUN apt update
+RUN apt install -y libnss3 libgconf-2-4 google-chrome-stable
+
+# Disable Chrome sandbox
+RUN sed -i 's|HERE/chrome"|HERE/chrome" --disable-setuid-sandbox --no-sandbox|g' "/opt/google/chrome/google-chrome"
+
 ENV APP_HOME /gamou
 RUN mkdir $APP_HOME
 RUN chown user $APP_HOME
@@ -29,5 +39,3 @@ ENTRYPOINT ["sh", "./entrypoint.sh"]
 EXPOSE 3000
 EXPOSE 3035
 EXPOSE 5432
-
-
