@@ -18,7 +18,8 @@ RUN mkdir $APP_HOME
 RUN chown user $APP_HOME
 USER user
 WORKDIR $APP_HOME
-ADD . $APP_HOME
+
+ADD Gemfile Gemfile.lock package.json yarn.lock $APP_HOME
 
 RUN yarn install
 RUN bundle install
