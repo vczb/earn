@@ -19,7 +19,7 @@ RUN apt-get install -y postgresql-client nodejs yarn libnss3 libgconf-2-4 google
 # Disable Chrome sandbox
 RUN sed -i 's|HERE/chrome"|HERE/chrome" --disable-setuid-sandbox --no-sandbox|g' "/opt/google/chrome/google-chrome"
 
-ENV APP_HOME /gamou
+ENV APP_HOME /gamou/
 RUN mkdir $APP_HOME
 RUN chown user $APP_HOME
 USER user
