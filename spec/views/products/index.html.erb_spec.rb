@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'product/index.html.erb' do
+RSpec.describe 'products/index.html.erb' do
   subject { rendered }
 
   it 'Product should be in the document' do
@@ -13,7 +13,7 @@ RSpec.describe 'product/index.html.erb' do
   it 'render link to create products page' do
     render
 
-    is_expected.to have_link(href: product_new_path)
+    is_expected.to have_link(href: new_product_path)
   end
 
   context 'when @products is not assigned' do
@@ -36,8 +36,8 @@ RSpec.describe 'product/index.html.erb' do
       is_expected.to have_css('p', text: product.name)
       is_expected.to have_css('p', text: product.short_description)
       is_expected.to have_css('p', text: product.price_in_diamonds)
-      is_expected.to have_link(href: product_edit_path(id: product.id))
-      is_expected.to have_link(href: product_destroy_path(id: product.id))
+      is_expected.to have_link(href: edit_product_path(product))
+      is_expected.to have_link(href: product_path(product.id))
     end
   end
 end
