@@ -64,7 +64,7 @@ RSpec.describe 'Sign up' do
         it 'render short error to password' do
           visit new_user_registration_path
 
-          fill_form_and_sign_up(email, "abc", "abc")
+          fill_form_and_sign_up(email, 'abc', 'abc')
           expect_to_have_errors(password: I18n.t('errors.messages.too_short.other', count: 6))
         end
       end
@@ -73,7 +73,7 @@ RSpec.describe 'Sign up' do
         it 'render password confirmation match error' do
           visit new_user_registration_path
 
-          fill_form_and_sign_up(email, password, "asd")
+          fill_form_and_sign_up(email, password, 'asd')
           expect_to_have_errors(password_confirmation: I18n.t('errors.messages.confirmation', attribute: 'Password'))
         end
       end
@@ -91,7 +91,7 @@ RSpec.describe 'Sign up' do
     within('form#new_user') do
       expect(page).to have_content(I18n.t('simple_form.error_notification.default_message'))
 
-      [:email, :password, :password_confirmation].each do |field|
+      %i[email password password_confirmation].each do |field|
         if fields[field]
           expect(page).to have_css(".user_#{field} .error", text: fields[field])
         else

@@ -46,9 +46,7 @@ RSpec.describe 'Sign in' do
           type: :success,
           message: I18n.t('devise.sessions.signed_in')
 
-        it do
-          expect(page).to have_current_path(root_path(locale: :en))
-        end
+        it { expect(page).to have_current_path(root_path(locale: :en)) }
       end
     end
 

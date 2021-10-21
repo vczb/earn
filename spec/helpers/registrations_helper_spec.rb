@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe RegistrationsHelper, type: :helper do
-  describe "#plan_title" do
+  describe '#plan_title' do
     subject { helper.plan_title(plan) }
 
     User.plans.keys.each do |plan|
@@ -15,7 +15,7 @@ RSpec.describe RegistrationsHelper, type: :helper do
     context 'when plan is nil' do
       let(:plan) { nil }
 
-      it { is_expected.to eq(I18n.t("web.user.plan.trial.title")) }
+      it { is_expected.to eq(I18n.t('web.user.plan.trial.title')) }
     end
   end
 end

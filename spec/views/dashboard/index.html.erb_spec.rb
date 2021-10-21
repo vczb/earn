@@ -19,7 +19,7 @@ RSpec.describe 'dashboard/index.html.erb' do
       assign(:today_returning_customers, 17)
     end
 
-    it 'render all assigned metrics'do
+    it 'render all assigned metrics' do
       render
 
       is_expected.to have_content(/Today's sales.*USD\$ 123/m)
