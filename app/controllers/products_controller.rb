@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_product, only: [:edit, :update, :destroy]
+  before_action :set_product, only: %i[edit update destroy]
 
   def index
     @products = Product.where(user_id: current_user.id)
@@ -58,6 +58,7 @@ class ProductsController < ApplicationController
         :image,
         :short_description,
         :description
-      ).merge(user_id: current_user.id)
+      )
+      .merge(user_id: current_user.id)
   end
 end

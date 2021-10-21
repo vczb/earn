@@ -3,7 +3,8 @@ FactoryBot.define do
     name { "MyString" }
     image { "MyString" }
     short_description { "MyString" }
+    price_in_diamonds { 100 }
     description { "MyText" }
-    user { nil }
+    user
   end
 end
