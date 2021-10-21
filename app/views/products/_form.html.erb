@@ -1,6 +1,6 @@
-<%= simple_form_for(@product, as: :product, method: @method, url: @form_url) do |f| %>
+<%= simple_form_for(@product, as: :product) do |f| %>
   <%= f.error_notification %>
-  <%= f.hidden_field :id %>
+
   <div class="form-group">
     <%= f.input :name,
                 required: true,

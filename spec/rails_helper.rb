@@ -33,6 +33,14 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 
+# Shoulda matchers setup
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
@@ -75,4 +83,5 @@ RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :view
   config.include Rails.application.routes.url_helpers, type: :system
   config.include Warden::Test::Helpers, type: :system
+  config.include Warden::Test::Helpers, type: :request
 end

@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe 'Dashboards', type: :request do
-  pending "add some examples to (or delete) #{__FILE__}"
-  # describe 'GET /index' do
-  # it 'returns http success' do
-  # get '/dashboard'
+RSpec.describe DashboardController do
+  before { login_as create(:user) }
 
-  # expect(response).to have_http_status(:success)
-  # end
-  # end
+  describe 'GET /index' do
+    it 'renders a successful response' do
+      get dashboard_path
+      expect(response).to be_successful
+    end
+  end
 end

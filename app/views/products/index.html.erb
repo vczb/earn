@@ -7,13 +7,13 @@
         </h1>
       </div>
       <div class="container flex items-start flex-wrap  p-6 mt-16" >
-        <a class="btn-secondary btn-small" href="/product/new" role="button">
+        <a class="btn-secondary btn-small" href="<%= new_product_path %>" role="button">
           <i class="text-white fas fa-plus-circle"></i>
           <%= I18n.t('web.product.new')  %>
         </a>
       </div>
       <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
-        <% if @products.length > 0 then %>
+        <% if @products.present? %>
           <% for product in @products do %>
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
               <img class="hover:grow hover:shadow-lg" src="<%= product.image %>">
@@ -25,10 +25,10 @@
                       <i class="text-pink-600 far fa-gem mr-1"></i>
                       <p class="text-white"><%= product.price_in_diamonds %></p>
                     </div>
-                    <%= link_to  product_edit_path(nil, id: product.id), title: I18n.t('web.product.edit'), class: "mr-4" do %>
+                    <%= link_to  edit_product_path(product), title: I18n.t('web.product.edit'), class: "mr-4" do %>
                       <i class="text-white fas fa-edit"></i>
                     <% end %>
-                    <%= link_to  product_destroy_path(nil, id: product.id),
+                    <%= link_to  product_path(product),
                                 method: :delete,
                                 data: {confirm: I18n.t('web.product.actions.destroy.confirm')},
                                 title: I18n.t('web.product.delete') do %>
