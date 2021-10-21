@@ -79,9 +79,11 @@ RSpec.describe ProductsController do
     end
 
     context 'with invalid parameters' do
-      it "renders a successful response (i.e. to display the 'edit' template)" do
+      it "renders a successful response and does not change value" do
         patch product_path(product), params: { product: { price_in_diamonds: nil } }
+
         expect(response).to be_successful
+        expect(product.reload.price_in_diamonds).to be_present
       end
     end
   end
