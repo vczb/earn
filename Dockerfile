@@ -32,6 +32,6 @@ RUN bundle install
 
 ENTRYPOINT ["sh", "./entrypoint.sh"]
 
-EXPOSE 3000
-EXPOSE 3035
-EXPOSE 5432
+# EXPOSE 3000
+# EXPOSE 3035
+# EXPOSE 5432

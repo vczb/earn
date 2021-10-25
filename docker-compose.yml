@@ -9,8 +9,8 @@ services:
     environment:
       POSTGRES_USER: gamou
       POSTGRES_PASSWORD: gamou
-    ports:
-      - '5432:5432'
+    # ports:
+    #   - '5432:5432'
   rails:
     tty: true
     stdin_open: true
@@ -20,11 +20,10 @@ services:
     command: ['/bin/bash', './entrypoint.sh']
     volumes:
       - .:/gamou
-    ports:
-      - '3000:3000'
-      - '3035:3035'
+    # ports:
+    #   - '3000:3000'
+    #   - '3035:3035'
     depends_on:
       - database
-
 volumes:
   pg_data:
