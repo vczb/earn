@@ -15,6 +15,8 @@ services:
     stdin_open: true
     container_name: gamou_app
     build: .
+    environment:
+      DB_HOST: database
     volumes:
       - .:/gamou
       - gamou-bundle:/usr/local/bundle
@@ -23,6 +25,7 @@ services:
       - 3035:3035
     depends_on:
       - database
+
 volumes:
   pg_data:
   gamou-bundle:
