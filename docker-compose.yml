@@ -17,7 +17,6 @@ services:
     container_name: gamou_app
     network_mode: 'host'
     build: .
-    command: ['/bin/bash', './entrypoint.sh']
     volumes:
       - .:/gamou
     # ports:
