@@ -22,7 +22,9 @@ services:
     # ports:
     #   - '3000:3000'
     #   - '3035:3035'
+      - gamou-bundle:/usr/local/bundle
     depends_on:
       - database
 volumes:
   pg_data:
+  gamou-bundle:
