@@ -2,28 +2,30 @@ version: '3'
 services:
   database:
     container_name: gamou_db
-    network_mode: 'host'
     image: postgres:13-alpine
     volumes:
       - pg_data:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: gamou
       POSTGRES_PASSWORD: gamou
-    # ports:
-    #   - '5432:5432'
+    ports:
+      - 5432:5432
   rails:
     tty: true
     stdin_open: true
     container_name: gamou_app
-    network_mode: 'host'
     build: .
-    command: ['/bin/bash', './entrypoint.sh']
+    environment:
+      DB_HOST: database
     volumes:
       - .:/gamou
-    # ports:
-    #   - '3000:3000'
-    #   - '3035:3035'
+      - gamou-bundle:/usr/local/bundle
+    ports:
+      - 3000:3000
+      - 3035:3035
     depends_on:
       - database
+
 volumes:
   pg_data:
+  gamou-bundle:

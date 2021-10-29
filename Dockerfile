@@ -30,8 +30,4 @@ ADD Gemfile Gemfile.lock package.json yarn.lock $APP_HOME
 RUN yarn install
 RUN bundle install
 
-ENTRYPOINT ["sh", "./entrypoint.sh"]
-
-# EXPOSE 3000
-# EXPOSE 3035
-# EXPOSE 5432
+CMD docker/cmd.sh
