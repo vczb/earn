@@ -15,8 +15,10 @@
       <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
         <% if @products.present? %>
           <% for product in @products do %>
-            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-              <img class="hover:grow hover:shadow-lg" src="<%= product.image %>">
+            <div class="w-full h-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+              <div class="relative pb-96">
+                <img class="absolute object-cover w-full h-full" src="<%= product.image %>">
+              </div>
               <div>
                 <div class="pt-3 flex items-center justify-between">
                   <p class="text-white"><%= product.name %></p>
@@ -37,7 +39,7 @@
                   </div>
                 </div>
                 <div class="pt-2 flex items-center" >
-                  <p class="text-white"><%= product.short_description %></p>
+                  <p class="text-white h-6 overflow-y-auto"><%= product.short_description %></p>
                 </div>
               </div>
             </div>
