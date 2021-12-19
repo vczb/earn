@@ -18,6 +18,8 @@ Rails
       get 'admin', to: 'admin/dashboard#index'
       get 'dashboard', to: 'dashboard#index'
 
-      resources :products, except: :show
+      resources :products
+
+      resources :customers
     end
   end

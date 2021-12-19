@@ -1,0 +1,15 @@
+<%= simple_form_for(@customer, as: :customer) do |f| %>
+  <%= f.error_notification %>
+  <div class="form-group">
+    <%= f.input :name,
+                required: true,
+                autofocus: true,
+                label_html: { class: "form-label label-small" },
+                input_html: { class: "form-text"  } %>
+  </div>
+  <div class="form-group">
+    <button name="commit" class="btn btn-medium btn-dark w-full" type="submit">
+      <%= I18n.t 'verbs.confirm' %>
+    </button>
+  </div>
+<% end %>
