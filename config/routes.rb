@@ -23,6 +23,9 @@ Rails
       namespace :api do
         namespace :v1 do
           post '/auth/login', to: 'authentication#login'
+          post '/customer/onboarding', to: 'customers#onboarding'
+          post '/customer/register', to: 'customers#register'
+          put '/customer/edit', to: 'customers#edit'
         end
       end
     end
