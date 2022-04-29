@@ -19,5 +19,11 @@ Rails
       get 'dashboard', to: 'dashboard#index'
 
       resources :products, except: :show
+
+      namespace :api do
+        namespace :v1 do
+          post '/auth/login', to: 'authentication#login'
+        end
+      end
     end
   end
