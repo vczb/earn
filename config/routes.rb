@@ -26,6 +26,7 @@ Rails
           post '/customer/onboarding', to: 'customers#onboarding'
           post '/customer/register', to: 'customers#register'
           put '/customer/edit', to: 'customers#edit'
+          post '/transaction/purchase', to: 'transactions#purchase'
         end
       end
     end

@@ -13,6 +13,6 @@ RSpec.describe Transaction, type: :model do
 
   context 'relations' do
     it { is_expected.to belong_to(:user) }
-    it { is_expected.to belong_to(:product) }
+    # it { is_expected.to belong_to(:product) }
   end
 end
