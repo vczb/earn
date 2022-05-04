@@ -74,6 +74,31 @@ module Api
         end
       end
 
+      # GET /customers/edit
+      def wallet
+        begin
+          @transactions = Transaction.where(wallet_params)
+
+          diamonds =
+            @transactions.reduce(0) do |sum, transaction|
+              if transaction.transaction_type == 'purchases'
+                sum + transaction.price_in_diamonds
+              else
+                sum - transaction.price_in_diamonds
+              end
+            end
+
+          render json: { diamonds: diamonds }
+        rescue Exception => e
+          render json: {
+                   error: {
+                     message: e.message
+                   }
+                 },
+                 status: :internal_server_error
+        end
+      end
+
       private
 
       def onboarding_params
@@ -81,11 +106,15 @@ module Api
       end
 
       def register_params
-        params.permit(:cpf, :user_id, :cpf, :name, :email, :phone, :user_id)
+        params.permit(:cpf, :user_id, :name, :email, :phone, :user_id)
       end
 
       def edit_params
-        params.permit(:cpf, :user_id, :cpf, :name, :email, :phone, :user_id)
+        params.permit(:cpf, :user_id, :name, :email, :phone, :user_id)
+      end
+
+      def wallet_params
+        params.permit(:customer_id, :user_id)
       end
     end
   end
