@@ -25,7 +25,8 @@ Rails
           post '/auth/login', to: 'authentication#login'
           post '/customer/onboarding', to: 'customers#onboarding'
           post '/customer/register', to: 'customers#register'
-          put '/customer/edit', to: 'customers#edit'
+          get '/customer/wallet', to: 'customers#wallet'
+          put  '/customer/edit', to: 'customers#edit'
           post '/transaction/purchase', to: 'transactions#purchase'
         end
       end
