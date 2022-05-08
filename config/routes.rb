@@ -28,6 +28,7 @@ Rails
           get '/customer/wallet', to: 'customers#wallet'
           put  '/customer/edit', to: 'customers#edit'
           post '/transaction/purchase', to: 'transactions#purchase'
+          get '/product/list', to: 'products#list'
         end
       end
     end
