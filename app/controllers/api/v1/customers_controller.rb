@@ -81,7 +81,7 @@ module Api
 
           diamonds =
             @transactions.reduce(0) do |sum, transaction|
-              if transaction.transaction_type == 'purchases'
+              if transaction.transaction_type === 'purchases'
                 sum + transaction.price_in_diamonds
               else
                 sum - transaction.price_in_diamonds
