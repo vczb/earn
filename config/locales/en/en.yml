@@ -127,6 +127,7 @@ en:
     header:
       login: Login
       logout: Logout
+      loyallity: Loyallity
       account: My Account
       dashboard: Dashboard
       product: My products

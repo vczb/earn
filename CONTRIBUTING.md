@@ -86,6 +86,12 @@ rails db:setup
 rails db:migrate
 ```
 
+Add the environment variables
+
+```
+LOYALLITY_APP=https://gamou-loyalitty.vercel.app/
+```
+
 Run the app
 
 ```

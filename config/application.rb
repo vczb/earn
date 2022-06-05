@@ -6,13 +6,17 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+Dotenv::Railtie.load
+
+HOSTNAME = ENV['HOSTNAME']
+
 def set_locate_configs_and_timezone
   config.time_zone = 'Brasilia'
   config.i18n.load_path +=
     Dir[Rails.root.join('config', 'locales', '**/*.{rb,yml}').to_s]
-    config.i18n.available_locales = ['pt-BR', 'en']
-    config.i18n.default_locale = 'en'
-  end
+  config.i18n.available_locales = %w[pt-BR en]
+  config.i18n.default_locale = 'en'
+end
 
 module Gamou
   class Application < Rails::Application
