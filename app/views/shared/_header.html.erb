@@ -63,6 +63,16 @@
               </a>
             </li>
             <li class="flex items-center">
+              <a title="<%= t 'web.header.loyallity' %>"
+                class="text-blueGray-700 px-3 py-4 flex items-center text-xs uppercase font-bold"
+                href="<%= ENV["LOYALLITY_APP"] %>" target="_blank">
+                <i class="text-blueGray-400 fas fa-gift text-lg leading-lg "></i>
+                <span class="inline-block ml-2">
+                  <%= t 'web.header.loyallity' %>
+                </span>
+              </a>
+            </li>
+            <li class="flex items-center">
               <a title="<%= t 'web.header.logout' %>" rel="nofollow" data-method="delete" href="/en/users/sign_out" class="text-blueGray-700 px-3 py-4 flex items-center text-xs uppercase font-bold" >
                 <i class="text-blueGray-400 fas fa-sign-out-alt text-lg leading-lg "></i>
                 <span class="inline-block ml-2">
