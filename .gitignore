@@ -27,6 +27,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/config/credentials.yml.enc
 
 /public/packs
 /public/packs-test
@@ -35,4 +36,6 @@
 yarn-debug.log*
 .yarn-integrity
 .vscode/*
-
+.yarn
+.env
+.env.production

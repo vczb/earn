@@ -16,6 +16,7 @@ test:
 
 production:
   <<: *default
-  database: gamou_production
-  username: gamou
-  password: gamou
+  database: <%= ENV.fetch("DB_NAME") { 'gamou_production' } %>
+  username: <%= ENV.fetch("DB_USER") { 'gamou' } %>
+  password: <%= ENV.fetch("DB_PASS") { 'gamou' } %>
+  host: <%= ENV.fetch("DB_HOST") { 'localhost' } %>
