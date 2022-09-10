@@ -1,5 +1,5 @@
 {
-  "name": "gamou",
+  "name": "@gamou/server",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
@@ -33,6 +33,8 @@
     "app:migrate": "docker-compose exec rails rails db:migrate",
     "app:attach": "docker-compose up -d && docker attach gamou_app",
     "db:up": "docker-compose up -d database",
-    "db:down": "docker-compose down database"
+    "db:down": "docker-compose down database",
+    "wb:dev": "./bin/webpack-dev-server",
+    "rb:dev": "rails s"
   }
 }

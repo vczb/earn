@@ -1,0 +1,16 @@
+{
+  "name": "gamou",
+  "packageManager": "yarn@3.2.3",
+  "private": true,
+  "scripts": {
+    "server:rb:dev": "yarn workspace @gamou/server rb:dev",
+    "server:wb:dev": "yarn workspace @gamou/server wb:dev",
+    "dev": "concurrently \"yarn server:rb:dev\" \"server:wb:dev\""
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "devDependencies": {
+    "concurrently": "^7.4.0"
+  }
+}
