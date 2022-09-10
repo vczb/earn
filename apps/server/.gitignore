@@ -35,6 +35,7 @@
 yarn-debug.log*
 .yarn-integrity
 .vscode/*
-.yarn/*
+.yarn
+.yarn/cache/*
 .env
 .env.production
