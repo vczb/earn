@@ -1,9 +1,15 @@
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   username: gamou
+#   password: gamou
+#   host: <%= ENV.fetch("DB_HOST") { 'localhost' } %>
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: gamou
-  password: gamou
-  host: <%= ENV.fetch("DB_HOST") { 'localhost' } %>
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
@@ -16,7 +22,10 @@ test:
 
 production:
   <<: *default
-  database: <%= ENV.fetch("DB_NAME") { 'gamou_production' } %>
-  username: <%= ENV.fetch("DB_USER") { 'gamou' } %>
-  password: <%= ENV.fetch("DB_PASS") { 'gamou' } %>
-  host: <%= ENV.fetch("DB_HOST") { 'localhost' } %>
+  url: <%= ENV['DATABASE_URL'] %>
+# production:
+#   <<: *default
+#   database: <%= ENV.fetch("DB_NAME") { 'gamou_production' } %>
+#   username: <%= ENV.fetch("DB_USER") { 'gamou' } %>
+#   password: <%= ENV.fetch("DB_PASS") { 'gamou' } %>
+#   host: <%= ENV.fetch("DB_HOST") { 'localhost' } %>
