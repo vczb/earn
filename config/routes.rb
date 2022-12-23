@@ -7,7 +7,7 @@ Rails
     #       defaults: {
     #         locale: I18n.default_locale
     #       } do
-      # root 'home#index'
+      root 'home#index'
 
       resources :products, except: :show
 
