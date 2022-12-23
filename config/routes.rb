@@ -8,11 +8,13 @@ Rails
     #         locale: I18n.default_locale
     #       } do
       root 'home#index'
-
-      resources :products, except: :show
-
+      
       namespace :api do
         namespace :v1 do
+
+          resources :products, except: :show
+          resources :users
+
           post '/auth/login', to: 'authentication#login'
           post '/customer/onboarding', to: 'customers#onboarding'
           post '/customer/register', to: 'customers#register'
