@@ -4,15 +4,11 @@ Gamou is a fully open source project. See the [LICENSE](./LICENSE) file for lice
 
 Before collaborating with the project, please read our [code of conduct](./CODE_OF_CONDUCT.md).
 
-See our [Wiki](https://github.com/vczb/gamou/wiki) for more information about the project.
-
 ---
 
 ### Getting started
 
 We are very happy with your interest in collaborating on the project, before starting read this guide carefully. Before submitting any pull request see the [issues](https://github.com/vczb/gamou/issues) guide, if your demand is not there create a new one and wait for approval for development.
-
-We use [kanban](https://github.com/vczb/gamou/projects/1) as a workflow, take a look there and see what's going on.
 
 ---
 
@@ -96,16 +92,68 @@ http://localhost:3000/
 
 ---
 
-<!--
 ## Development workflow
 
-See all [available commands](https://github.com/vczb/gamou/wiki/Available-commands)
+**Whenever you send a pull request you must follow this workflow**
 
-Follow this [git workflow](https://github.com/vczb/gamou/wiki/Git-workflow)
+Rebase with upstream
 
-If you are using VSCode we recommend [this extensions](https://github.com/vczb/gamou/wiki/Recommended-extensions-for-VSCode)
+```
+git checkout main
+git fetch upstream
+git rebase upstream/main
+```
 
---- -->
+Create a new branch
+
+```
+git checkout -b MY-BRANCH-NAME
+```
+
+After making all the code modifications, you must commit your changes
+
+```
+git add .
+git commit -m 'My commit bla bla bla'
+```
+
+Submit a Pull Request
+
+```
+git push origin MY-BRANCH-NAME
+```
+
+A link will be generated and you will be forwarded to your project on github, do a new code check and then accept the pull request
+
+Wait for our approval, or request for review.
+
+---
+
+### Upgrading your origin with upstream
+
+Switch to main branch
+
+```
+git checkout main
+```
+
+Fetch upstream updates
+
+```
+git fetch upstream
+```
+
+Reset hard as main
+
+```
+git reset --hard upstream/main
+```
+
+Push to the origin
+
+```
+git push origin main
+```
 
 ## Thank you
 
