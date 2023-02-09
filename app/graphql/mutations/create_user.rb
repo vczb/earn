@@ -13,6 +13,7 @@ module Mutations
     field :errors, [String], null: true
 
     def resolve(email:, password:, company_name: nil, owner_name: nil, phone: nil, plan: nil, diamond_price_in_cents: nil)
+
       user = User.new(
         email: email,
         password: password,
@@ -25,10 +26,11 @@ module Mutations
       )
 
       if user.save
-        { user: user }
+        {user: user}
       else
         { errors: user.errors.full_messages }
       end
+
     end
   end
 end

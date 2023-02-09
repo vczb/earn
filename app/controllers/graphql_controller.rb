@@ -3,17 +3,24 @@ class GraphqlController < ApplicationController
   # This allows for outside API access while preventing CSRF attacks,
   # but you'll have to authenticate your user separately
   # protect_from_forgery with: :null_session
-
+  skip_before_action :verify_authenticity_token # TODO: check if it is safe to production
+  
   def execute
     variables = prepare_variables(params[:variables])
     query = params[:query]
     operation_name = params[:operationName]
+    current_user  = get_logged_in_user(request)
+
     context = {
-      # Query context goes here, for example:
-      # current_user: current_user,
+      current_user: current_user,
     }
-    result = ApiSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
-    render json: result
+    
+    if is_sign_in_or_create_user_query(query) || authenticate_user(current_user)
+      result = ApiSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
+      render json: result
+    else
+      render json: {message: 'Unauthorized!'}
+    end
   rescue StandardError => e
     raise e unless Rails.env.development?
     handle_error_in_development(e)
@@ -47,4 +54,31 @@ class GraphqlController < ApplicationController
 
     render json: { errors: [{ message: e.message, backtrace: e.backtrace }], data: {} }, status: 500
   end
+
+  def get_logged_in_user(request)
+
+    authorization_header = request.headers['Authorization']
+    return unless authorization_header.present?
+
+    token = authorization_header.split(' ').last
+    
+    begin
+      decoded_token = JsonWebToken.decode(token)
+      user_id = decoded_token[:user_id]
+
+      User.find(user_id)
+      
+    rescue JWT::DecodeError, ActiveRecord::RecordNotFound
+      nil
+    end
+  end
+
+  def authenticate_user(current_user = nil)
+    !current_user.nil?
+  end
+
+  def is_sign_in_or_create_user_query(query)
+    query.include?("signInUser") || query.include?("createUser")
+  end
+  
 end

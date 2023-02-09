@@ -1,7 +1,6 @@
 module Mutations
   class UpdateProduct < BaseMutation
     argument :id, ID, required: true
-    argument :user_id, Integer, required: true
     argument :name, String, required: false
     argument :price_in_diamonds, Integer, required: false
     argument :image, String, required: false
@@ -10,8 +9,8 @@ module Mutations
 
     type Types::ProductType
 
-    def resolve(id:, user_id:, name: nil, price_in_diamonds: nil, image: nil, short_description: nil, description: nil)
-      product = Product.where(id: id, user_id: user_id).first
+    def resolve(id:, name: nil, price_in_diamonds: nil, image: nil, short_description: nil, description: nil)
+      product = Product.where(id: id, user_id: context[:current_user].id).first
 
       if product.present?
 
