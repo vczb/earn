@@ -25,5 +25,10 @@ Rails
           get '/product/list', to: 'products#list'
         end
       end
+
+      if Rails.env.development?
+        mount GraphqlPlayground::Rails::Engine, at: "/playground", graphql_path: "/graphql"
+      end
+      post "/graphql", to: "graphql#execute"
     # end
   end
