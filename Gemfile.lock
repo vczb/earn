@@ -105,6 +105,9 @@ GEM
     ffi (1.15.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    graphql (2.0.21)
+    graphql_playground-rails (2.1.0)
+      rails (>= 5.1.0)
     haml (5.2.1)
       temple (>= 0.8.0)
       tilt
@@ -311,6 +314,8 @@ DEPENDENCIES
   database_cleaner-active_record
   devise
   factory_bot_rails
+  graphql (~> 2.0)
+  graphql_playground-rails
   jbuilder (~> 2.7)
   jwt
   listen (~> 3.3)

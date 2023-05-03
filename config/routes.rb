@@ -26,11 +26,16 @@ Rails
           post '/customer/onboarding', to: 'customers#onboarding'
           post '/customer/register', to: 'customers#register'
           get '/customer/wallet', to: 'customers#wallet'
-          put  '/customer/edit', to: 'customers#edit'
+          put '/customer/edit', to: 'customers#edit'
           post '/transaction/purchase', to: 'transactions#purchase'
           post '/transaction/withdrawal', to: 'transactions#withdrawal'
           get '/product/list', to: 'products#list'
         end
       end
+
+      mount GraphqlPlayground::Rails::Engine,
+            at: '/playground',
+            graphql_path: '/graphql'
+      post '/graphql', to: 'graphql#execute'
     end
   end

@@ -41,6 +41,13 @@ gem 'jwt'
 gem 'bcrypt'
 gem 'rack-cors'
 
+# https://github.com/rmosolgo/graphql-ruby
+gem "graphql", "~> 2.0"
+
+# https://github.com/papodaca/graphql_playground-rails
+gem "graphql_playground-rails"
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
