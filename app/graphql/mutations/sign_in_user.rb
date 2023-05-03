@@ -13,14 +13,10 @@ module Mutations
       if user.valid_password?(password)
         token = JsonWebToken.encode(user_id: user.id)
         time = Time.now + 24.hours.to_i
-        
-        {
-          token: token,
-          exp: time.strftime('%m-%d-%Y %H:%M'),
-          user: user
-        }
+
+        { token: token, exp: time.strftime('%m-%d-%Y %H:%M'), user: user }
       else
-        raise GraphQL::ExecutionError, "Invalid email or password"
+        raise GraphQL::ExecutionError, 'Invalid email or password'
       end
     end
   end
