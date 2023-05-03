@@ -10,26 +10,25 @@ module Types
     field :all_users, [Types::UserType], null: false
 
     def all_users
-        User.where(id: context[:current_user].id)
+      User.where(id: context[:current_user].id)
     end
 
     field :all_customers, [Types::CustomerType], null: false
 
     def all_customers
-        Customer.where(user_id: context[:current_user].id)
+      Customer.where(user_id: context[:current_user].id)
     end
 
     field :all_transactions, [Types::TransactionType], null: false
 
     def all_transactions
-        Transaction.where(user_id: context[:current_user].id)
+      Transaction.where(user_id: context[:current_user].id)
     end
 
     field :all_products, [Types::ProductType], null: false
 
     def all_products
-        Product.where(user_id: context[:current_user].id)
+      Product.where(user_id: context[:current_user].id)
     end
-    
   end
 end
