@@ -38,9 +38,11 @@ jobs:
           PGPASSWORD: gamou
           RAILS_ENV: test
         run: |
+          export NODE_OPTIONS=--openssl-legacy-provider
           bin/rails db:setup
           bin/yarn install
           bundle install
+          bundle exec rake webpacker:compile
 
       - name: Run Tests
         env:
