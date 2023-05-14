@@ -146,12 +146,12 @@
                                ],
                           "datasets": [{
                               "label": "<%= I18n.t('web.dashboard.sales') %>",
-                              "data": [10, 20, 30, 40, 20, 30, 40],
+                              "data": <%= @week_sales  %>,
                               "borderColor": "rgb(255, 99, 132)",
                               "backgroundColor": "rgba(255, 99, 132, 0.2)"
                           }, {
                               "label": "<%= I18n.t('web.dashboard.diamonds') %>",
-                              "data": [5, 15, 10, 30, 15, 10, 30],
+                              "data":  <%= @week_diamonds  %>,
                               "type": "line",
                               "fill": false,
                               "borderColor": "rgb(54, 162, 235)"
@@ -199,19 +199,19 @@
                             "<%= I18n.t('calendar.month.october.short_title') %>",
                             "<%= I18n.t('calendar.month.november.short_title') %>",
                             "<%= I18n.t('calendar.month.december.short_title') %>",
-                  
+
                              ],
                           "datasets": [
                             {
                               "label": "<%= I18n.t('web.dashboard.sales') %>",
-                              "data": [30, 59, 80, 81, 70, 90, 92, 80, 81, 70, 90, 92],
+                              "data": <%= @yearly_sales %>,
                               "fill": false,
                               "borderColor": "rgb(75, 192, 192)",
                               "lineTension": 0.1
                             },
                             {
                               "label": "<%= I18n.t('web.dashboard.diamonds') %>",
-                              "data": [20, 50, 70, 79, 60, 70, 80, 70, 75, 60, 80, 80],
+                              "data": <%= @yearly_diamonds %>,
                               "fill": false,
                               "borderColor": "rgb(255, 99, 132)",
                               "lineTension": 0.1
