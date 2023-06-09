@@ -16,9 +16,14 @@ _and [more](https://github.com/vczb/gamou/wiki/What-is-inside%3F)_
 
 See our [Wiki](https://github.com/vczb/gamou/wiki) for more information about the project.
 
-## Contributing
+## Who is Contributing 
+Thanks for all who is contributing with us.
 
-You are very warmly welcome to help. Please follow our [contribution guidelines](./CONTRIBUTING.md)
+<a href="https://github.com/vczb/gamou/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=vczb/gamou" />
+</a>
+
+Be part of this amazing team, [contribute](./CONTRIBUTING.md) as well
 
 ## Licence
 
