@@ -112,7 +112,7 @@ GEM
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
-    graphql (2.0.22)
+    graphql (2.0.24)
     graphql_playground-rails (2.1.0)
       rails (>= 5.1.0)
     i18n (1.14.1)
