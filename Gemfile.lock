@@ -160,7 +160,7 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.15.2-x86_64-linux)
+    nokogiri (1.15.3-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.5.3)
@@ -178,7 +178,7 @@ GEM
       rack (>= 2.0.0)
     rack-mini-profiler (3.1.0)
       rack (>= 1.2.0)
-    rack-proxy (0.6.5)
+    rack-proxy (0.7.6)
       rack
     rack-test (2.1.0)
       rack (>= 1.3)
@@ -298,7 +298,7 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (~> 4.0)
-    webpacker (5.3.0)
+    webpacker (5.4.4)
       activesupport (>= 5.2)
       rack-proxy (>= 0.6.1)
       railties (>= 5.2)
@@ -348,7 +348,7 @@ DEPENDENCIES
   tzinfo-data
   web-console (>= 4.1.0)
   webdrivers
-  webpacker (~> 5.0)
+  webpacker (~> 5.4)
 
 RUBY VERSION
    ruby 3.0.0p0
