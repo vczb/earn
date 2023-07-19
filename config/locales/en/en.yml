@@ -223,16 +223,16 @@ en:
             subtitle: You can work wherever you want without any problems. All information is recorded on the servers.
     dashboard:
       diamonds: Diamonds
-      sales: Sales
+      sales: USD
       today:
         sales: Today's sales
         diamonds: Today's diamonds
         customers: Today's customers
         products: Redeemed products
         new_customers: New customers
-        returning_customers: Recurring customers
-      weekly_control: Weekly Control
-      monthly_control: Monthly Control
+        returning_customers: Returning customers
+      weekly_control: 'Sales: Weekly Control'
+      monthly_control: 'Sales: Monthly Control'
       customers_by_period: Customers by Period
       customers: Customers
       gender: Gender

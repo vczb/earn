@@ -413,7 +413,7 @@ pt-BR:
             subtitle: Poderá trabalhar da onde quiser sem problemas. Todas as informações são gravadas nos servidores.
     dashboard:
       diamonds: Diamantes
-      sales: Vendas
+      sales: R$
       today:
         sales: Vendas de hoje
         diamonds: Diamantes de hoje
@@ -421,8 +421,8 @@ pt-BR:
         products: Produtos resgatados
         new_customers: Novos clientes
         returning_customers: Clientes recorrentes
-      weekly_control: Controle Semanal
-      monthly_control: Controle Mensal
+      weekly_control: 'Vendas: Controle Semanal'
+      monthly_control: 'Vendas: Controle Mensal'
       customers_by_period: Clientes por período
       customers: Clientes
       gender: Gênero
