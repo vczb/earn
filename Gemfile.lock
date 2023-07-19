@@ -117,7 +117,7 @@ GEM
       rails (>= 5.1.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
-    jbuilder (2.11.2)
+    jbuilder (2.11.4)
       activesupport (>= 5.0.0)
     jwt (2.7.1)
     kaminari (1.2.2)
@@ -325,7 +325,7 @@ DEPENDENCIES
   factory_bot_rails
   graphql (~> 2.0)
   graphql_playground-rails
-  jbuilder (~> 2.7)
+  jbuilder (~> 2.11)
   jwt
   listen (~> 3.8)
   pg (~> 1.5)
