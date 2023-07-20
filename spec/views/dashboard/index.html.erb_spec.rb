@@ -27,7 +27,7 @@ RSpec.describe 'dashboard/index.html.erb' do
       is_expected.to have_content(/New customers.* 4002/m)
       is_expected.to have_content(/Today's diamonds.* 8922/m)
       is_expected.to have_content(/Redeemed products.* 800/m)
-      is_expected.to have_content(/Recurring customers.* 17/m)
+      is_expected.to have_content(/Returning customers.* 17/m)
     end
   end
 end
