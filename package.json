@@ -21,7 +21,7 @@
     "@prettier/plugin-ruby": "^1.6.1",
     "prettier": "^2.3.0",
     "prettier-plugin-erb": "^0.1.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^4.15.1"
   },
   "scripts": {
     "prettier:format": "prettier --write \"app/**/*.{rb, erb}\"",
