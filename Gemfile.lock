@@ -112,7 +112,7 @@ GEM
     ffi (1.15.5)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    graphql (2.0.24)
+    graphql (2.1.0)
     graphql_playground-rails (2.1.0)
       rails (>= 5.1.0)
     i18n (1.14.1)
@@ -323,7 +323,7 @@ DEPENDENCIES
   database_cleaner-active_record
   devise
   factory_bot_rails
-  graphql (~> 2.0)
+  graphql (~> 2.1)
   graphql_playground-rails
   jbuilder (~> 2.11)
   jwt
