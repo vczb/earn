@@ -42,7 +42,7 @@ gem 'bcrypt'
 gem 'rack-cors'
 
 # https://github.com/rmosolgo/graphql-ruby
-gem "graphql", "~> 2.0"
+gem "graphql", "~> 2.1"
 
 # https://github.com/papodaca/graphql_playground-rails
 gem "graphql_playground-rails"
