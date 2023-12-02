@@ -32,7 +32,7 @@
                     <%= link_to  edit_product_path(product), title: I18n.t('web.product.edit'), class: "mr-4" do %>
                       <i class="text-white fas fa-edit"></i>
                     <% end %>
-                    <%= link_to  product_path(product),
+                    <%= button_to  product_path(product),
                                 method: :delete,
                                 data: {confirm: I18n.t('web.product.actions.destroy.confirm')},
                                 title: I18n.t('web.product.delete') do %>
