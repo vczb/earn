@@ -272,6 +272,8 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    tailwindcss-rails (2.0.32-x86_64-linux)
+      railties (>= 6.0.0)
     thor (1.2.2)
     tilt (2.2.0)
     timeout (0.4.0)
@@ -337,6 +339,7 @@ DEPENDENCIES
   shoulda-matchers
   simple_form
   spring
+  tailwindcss-rails
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)

@@ -1,8 +1,12 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    './public/*.html',
+    './app/helpers/**/*.rb',
+    './app/javascript/**/*.js',
+    './app/views/**/*.{erb,haml,html,slim}'
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -57,8 +61,10 @@ module.exports = {
       }
     }
   },
-  variants: {
-    extend: {}
-  },
-  plugins: []
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/container-queries'),
+  ]
 }
