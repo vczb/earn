@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_01_205008) do
-
+ActiveRecord::Schema[7.0].define(version: 2023_12_02_171632) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,7 +19,7 @@ ActiveRecord::Schema.define(version: 2022_05_01_205008) do
     t.string "record_type", null: false
     t.bigint "record_id", null: false
     t.bigint "blob_id", null: false
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
@@ -33,7 +32,7 @@ ActiveRecord::Schema.define(version: 2022_05_01_205008) do
     t.string "service_name", null: false
     t.bigint "byte_size", null: false
     t.string "checksum", null: false
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
@@ -51,8 +50,8 @@ ActiveRecord::Schema.define(version: 2022_05_01_205008) do
     t.string "cpf"
     t.date "birthday"
     t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "uid"
     t.index ["uid"], name: "index_customers_on_uid", unique: true
     t.index ["user_id"], name: "index_customers_on_user_id"
@@ -61,12 +60,11 @@ ActiveRecord::Schema.define(version: 2022_05_01_205008) do
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.integer "price_in_diamonds"
-    t.string "image"
     t.string "short_description"
     t.text "description"
     t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_products_on_user_id"
   end
 
@@ -76,8 +74,8 @@ ActiveRecord::Schema.define(version: 2022_05_01_205008) do
     t.integer "transaction_type"
     t.bigint "product_id"
     t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.bigint "customer_id", null: false
     t.index ["customer_id"], name: "index_transactions_on_customer_id"
     t.index ["product_id"], name: "index_transactions_on_product_id"
@@ -88,10 +86,10 @@ ActiveRecord::Schema.define(version: 2022_05_01_205008) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "reset_password_sent_at", precision: nil
+    t.datetime "remember_created_at", precision: nil
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "company_name"
     t.string "owner_name"
     t.string "phone"
