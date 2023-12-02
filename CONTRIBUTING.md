@@ -19,8 +19,7 @@ We use [kanban](https://github.com/vczb/gamou/projects/1) as a workflow, take a 
 ## Required versions
 
 - Ruby _3.0.0_
-- Rails _6.1.3_
-- Node _14.0.0_
+- Rails _7.0.8_
 - Postgres _13.2.1_
 
 ---
@@ -66,7 +65,6 @@ git remote add origin git@github.com:<YOUR GITHUB USERNAME>/gamou.git
 Install the dependences
 
 ```
-yarn install
 bundle install
 ```
 
@@ -90,12 +88,6 @@ Run the app
 
 ```
 rails s
-```
-
-_open another terminal_
-
-```
-bin/webpack-dev-server
 ```
 
 Open in your favorite browser

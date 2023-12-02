@@ -7,7 +7,6 @@ Gamou is a project developed in Ruby on Rails fully open source that aims to sti
 This project uses lot of stuff as:
 
 - [Rails](https://rubyonrails.org/)
-- [Prettier](https://prettier.io/)
 - [Tailwind CSS](https://tailwindcss.com/)
 
 _and [more](https://github.com/vczb/gamou/wiki/What-is-inside%3F)_
@@ -16,7 +15,8 @@ _and [more](https://github.com/vczb/gamou/wiki/What-is-inside%3F)_
 
 See our [Wiki](https://github.com/vczb/gamou/wiki) for more information about the project.
 
-## Who is Contributing 
+## Who is Contributing
+
 Thanks for all who is contributing with us.
 
 <a href="https://github.com/vczb/gamou/graphs/contributors">
