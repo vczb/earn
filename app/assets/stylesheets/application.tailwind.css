@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /*
+  BUTTONS
+*/
+
+  .btn {
+    @apply cursor-pointer font-bold uppercase rounded shadow hover:shadow-md outline-none focus:outline-none ease-linear transition-all duration-150;
+  }
+
+  .btn-small {
+    @apply text-xs px-4 py-2;
+  }
+
+  .btn-medium {
+    @apply text-sm px-6 py-3;
+  }
+
+  .btn-primary {
+    @apply bg-white text-blueGray-700 btn;
+  }
+
+  .btn-secondary {
+    @apply bg-lightBlue-400 text-white btn;
+  }
+
+  .btn-success {
+    @apply bg-emerald-400 text-white btn;
+  }
+
+  .btn-alert {
+    @apply bg-red-400 text-white btn;
+  }
+
+  .btn-info {
+    @apply bg-pink-500 text-white btn;
+  }
+
+  .btn-dark {
+    @apply bg-blueGray-800 text-white btn;
+  }
+
+  /*
+  FORM
+*/
+
+  form {
+    .form-group {
+      @apply relative w-full mb-3;
+    }
+    .form-label {
+      @apply block uppercase text-blueGray-600  font-bold mb-2;
+
+      &.label-small {
+        @apply text-xs;
+      }
+    }
+
+    .form-hint {
+      @apply block uppercase text-blueGray-500  font-bold mb-2 text-xs;
+    }
+
+    .form-text {
+      @apply border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150;
+    }
+    .error_notification {
+      @apply text-pink-600 text-xs mb-3 mt-3;
+    }
+    .error {
+      @apply text-pink-600 text-xs mb-2 mt-2;
+    }
+
+    .form-file {
+      @apply block uppercase text-blueGray-600 w-full mb-2 cursor-pointer;
+    }
+  }
+
+  /* MENU */
+
+  #menu-list {
+    @apply opacity-0 pointer-events-none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #menu-button:checked ~ #menu-list {
+    @apply opacity-100 pointer-events-auto;
+  }
+
+  /*FLASH BANNERS*/
+
+  .flash-banner {
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .flash-banner:checked + label {
+    -webkit-animation: slide-out-top 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+      both;
+    animation: slide-out-top 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
+  /*
+  ANIMATIONS
+*/
+
+  @keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-1000px);
+      transform: translateY(-1000px);
+      opacity: 0;
+      pointer-events: none;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+  @keyframes slide-out-top {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+    100% {
+      -webkit-transform: translateY(-1000px);
+      transform: translateY(-1000px);
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}

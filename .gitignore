@@ -39,3 +39,6 @@ yarn-debug.log*
 .yarn
 .env
 .env.production
+
+/app/assets/builds/*
+!/app/assets/builds/.keep
