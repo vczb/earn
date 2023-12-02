@@ -40,7 +40,6 @@ jobs:
         run: |
           export NODE_OPTIONS=--openssl-legacy-provider
           bin/rails db:setup
-          bin/yarn install
           bundle install
           bundle exec rake webpacker:compile
 
@@ -52,7 +51,3 @@ jobs:
           RAILS_ENV: test
         run: |
           bundle exec rspec
-
-      - name: Run Prettier Check
-        run: |
-          yarn prettier:check

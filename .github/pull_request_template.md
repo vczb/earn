@@ -13,7 +13,3 @@ Close #?
 ##### Add a new gem ?
 
 [] yes [x] no
-
-##### Add a new package ?
-
-[] yes [x] no
