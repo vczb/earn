@@ -23,6 +23,7 @@
     "@types/react-input-mask": "^3.0.1"
   },
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets --loader:.js=jsx"
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets --loader:.js=jsx",
+    "check-types": "tsc --project app/javascript/pontuei/tsconfig.json --noEmit --watch --preserveWatchOutput"
   }
 }
