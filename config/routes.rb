@@ -37,5 +37,7 @@ Rails
             at: '/playground',
             graphql_path: '/graphql'
       post '/graphql', to: 'graphql#execute'
+
+      get 'pontuei', to: 'pontuei#index'
     end
   end

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t 'web.title' %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'https://rsms.me/inter/inter.css' %>
+    <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js' %>
+    <script type="module" src="https://ga.jspm.io/npm:@fortawesome/fontawesome-free@6.1.1/js/all.js"></script>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+</html>
