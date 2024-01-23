@@ -38,6 +38,9 @@ Rails
             graphql_path: '/graphql'
       post '/graphql', to: 'graphql#execute'
 
-      get 'pontuei', to: 'pontuei#index'
+      get '/pontuei/', to: 'pontuei#index'
     end
+    # constraints subdomain: 'app' do
+    #   get '/*path', to: 'pontuei#index'
+    # end
   end
