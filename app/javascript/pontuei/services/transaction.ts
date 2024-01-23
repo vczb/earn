@@ -23,7 +23,7 @@ async function purchase({
   value,
   token,
 }: PurchaseProps): Promise<FechResponse & TransactionResponse> {
-  const url = process.env.REACT_APP_BASE_API_URL + "transaction/purchase";
+  const url = "http://localhost:3000/api/v1/" + "transaction/purchase";
 
   return await fetch(url, {
     method: "POST",
@@ -48,7 +48,7 @@ async function withdrawal({
   productId,
   token,
 }: withdrawalProps): Promise<FechResponse & TransactionResponse> {
-  const url = process.env.REACT_APP_BASE_API_URL + "transaction/withdrawal";
+  const url = "http://localhost:3000/api/v1/" + "transaction/withdrawal";
 
   return await fetch(url, {
     method: "POST",

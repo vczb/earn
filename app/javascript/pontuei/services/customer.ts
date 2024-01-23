@@ -28,7 +28,7 @@ async function findByCPF({
   userId,
   token = "",
 }: FindByCPFRequest): Promise<FechResponse & CustomerResponse> {
-  const url = process.env.REACT_APP_BASE_API_URL + `customer/onboarding`;
+  const url = "http://localhost:3000/api/v1/" + `customer/onboarding`;
 
   return await fetch(url, {
     method: "POST",
@@ -51,7 +51,7 @@ async function register({
   userId,
   phone,
 }: RegisterOrEditRequest): Promise<FechResponse & CustomerResponse> {
-  const url = process.env.REACT_APP_BASE_API_URL + `customer/register`;
+  const url = "http://localhost:3000/api/v1/" + `customer/register`;
 
   return await fetch(url, {
     method: "POST",
@@ -74,7 +74,7 @@ async function edit({
   userId,
   phone,
 }: RegisterOrEditRequest): Promise<FechResponse & CustomerResponse> {
-  const url = process.env.REACT_APP_BASE_API_URL + `customer/edit`;
+  const url = "http://localhost:3000/api/v1/" + `customer/edit`;
 
   return await fetch(url, {
     method: "PUT",
@@ -94,7 +94,7 @@ async function getWallet({
   userId,
   customerId,
 }: GetWalletRequest): Promise<FechResponse & WalletResponse> {
-  const url = process.env.REACT_APP_BASE_API_URL + `customer/wallet`;
+  const url = "http://localhost:3000/api/v1/" + `customer/wallet`;
 
   const query = `?user_id=${userId}&customer_id=${customerId}`;
 

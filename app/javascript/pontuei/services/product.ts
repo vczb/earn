@@ -25,7 +25,7 @@ async function list({
   userId,
   token,
 }: ProductRequest): Promise<FechResponse & ProductResponse> {
-  const url = process.env.REACT_APP_BASE_API_URL + "product/list";
+  const url = "http://localhost:3000/api/v1/" + "product/list";
 
   const query = `?user_id=${userId}`;
 

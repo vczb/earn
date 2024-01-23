@@ -15,7 +15,7 @@ async function login({
   email,
   password,
 }: LoginRequest): Promise<FechResponse & LoginResponse> {
-  const url = process.env.REACT_APP_BASE_API_URL + "auth/login";
+  const url = "http://localhost:3000/api/v1/" + "auth/login";
 
   return await fetch(url, {
     method: "POST",
