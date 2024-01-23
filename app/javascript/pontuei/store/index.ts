@@ -20,7 +20,7 @@ import transactionReducer from "features/transaction/transactionSlice";
 import productReducer from "features/product/productSlice";
 import notificationReducer from "features/notification/notificationSlice";
 
-export const persistKey = process.env.REACT_APP_STORAGE_ROOT_KEY as string;
+export const persistKey = 'gamou-pontuei'
 
 const persistConfig = {
   key: persistKey,
