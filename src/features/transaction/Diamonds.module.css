@@ -1,0 +1,8 @@
+.divider {
+  position: absolute;
+  height: 100%;
+  width: 0.1rem;
+  background: currentColor;
+  left: 50%;
+  transform: translateX(-50%);
+}
