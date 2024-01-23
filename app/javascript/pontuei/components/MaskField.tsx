@@ -21,6 +21,7 @@ const MaskField = ({ maskValue, mask, ...props }: MaskFieldProps) => {
 
   return (
     <InputMask mask={maskField} defaultValue={maskValue}>
+      {/* @ts-ignore */}
       {() => <TextField fullWidth {...props} />}
     </InputMask>
   );

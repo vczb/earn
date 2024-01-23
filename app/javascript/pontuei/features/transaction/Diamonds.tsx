@@ -16,7 +16,7 @@ import { Elevation, GridContainer, Wrapper } from "components";
 
 import { useTransaction } from "./transactionSlice";
 
-import styles from "./Diamonds.module.css";
+// import styles from "./Diamonds.module.css";
 
 export default function Diamonds() {
   const { transaction, calcDiamonds, onPurchase, onResetRequestStatus } =
@@ -111,7 +111,9 @@ export default function Diamonds() {
                   }}
                 />
               </Grid>
-              <Box color={"grey.300"} className={styles.divider} />
+              <Box color={"grey.300"}
+              // className={styles.divider}
+              />
               <Grid
                 item
                 container

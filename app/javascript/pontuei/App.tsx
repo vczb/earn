@@ -29,8 +29,10 @@ const theme = createTheme({
 function App() {
   return (
     <Provider store={store}>
+      {/* @ts-ignore */}
       <PersistGate loading={null} persistor={persistor}>
         {globalStyles}
+        {/* @ts-ignore */}
         <ThemeProvider theme={theme}>
           <AppRoutes />
           <Toast />

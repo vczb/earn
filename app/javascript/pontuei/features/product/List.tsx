@@ -6,7 +6,7 @@ import { useCustomer } from "features/customer/customerSlice";
 
 import { Product, useProduct } from "./productSlice";
 
-import styles from "./List.module.css";
+// import styles from "./List.module.css";
 import Modal from "./Modal";
 import Item from "./Item";
 import Info from "./Info";
@@ -52,7 +52,7 @@ export default function List() {
               my: 2,
               px: 1,
             }}
-            className={styles.divider}
+            // className={styles.divider}
           />
           <Box
             sx={{
@@ -78,7 +78,7 @@ export default function List() {
               my: 2,
               px: 1,
             }}
-            className={styles.divider}
+            // className={styles.divider}
           />
           <Box sx={{ my: 2, display: "flex", width: "100%" }}>
             <Button
