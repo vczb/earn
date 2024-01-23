@@ -1,3 +1,3 @@
 // Entry point for the build script in your package.json
 
-import './hello_react'
+import './pontuei'

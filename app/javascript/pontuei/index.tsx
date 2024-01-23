@@ -3,9 +3,7 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+document.addEventListener('DOMContentLoaded', () => {
+  const rootEl = document.getElementById('app')
+  ReactDOM.render(<App />, rootEl)
+})
