@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= t 'web.title' %></title>
+    <title>Pontuei - Programa de Gamificação</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,7 +12,10 @@
     <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js' %>
     <script type="module" src="https://ga.jspm.io/npm:@fortawesome/fontawesome-free@6.1.1/js/all.js"></script>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <%= yield %>
