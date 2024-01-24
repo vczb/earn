@@ -1,5 +1,5 @@
 class PontueiController < ApplicationController
-  layout 'spa'
+  layout 'pontuei'
   def index
   end
 end
