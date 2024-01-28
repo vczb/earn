@@ -1,19 +1,28 @@
 # GAMOU
 
-Gamou is a project developed in Ruby on Rails fully open source that aims to stimulate trade through a gamification system.
+GAMOU is an open-source project leveraging gamification to boost commerce. It combines a Rails backend with a React frontend in a subdomain, ensuring dynamic user interaction.
 
-## What is inside?
+## Technology Stack
 
-This project uses lot of stuff as:
+### Rails Ecosystem
 
 - [Rails](https://rubyonrails.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Rails Admin](https://github.com/sferik/rails_admin)
+- [RSpec](https://github.com/rspec/rspec-rails)
+- [Devise](https://github.com/heartcombo/devise)
+- _[More...](https://github.com/vczb/gamou/wiki/What-is-inside%3F)_
 
-_and [more](https://github.com/vczb/gamou/wiki/What-is-inside%3F)_
+### Pontuei (React Ecosystem)
 
-## Documentation
+- [React](https://reactjs.org/)
+- [Redux + Toolkit](https://redux-toolkit.js.org/)
+- [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview)
+- [Material-UI](https://material-ui.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- _[More...](https://github.com/vczb/gamou/wiki/Pontuei-React-App)_
 
-See our [Wiki](https://github.com/vczb/gamou/wiki) for more information about the project.
+Learn more in our [Wiki](https://github.com/vczb/gamou/wiki).
 
 ## Who is Contributing
 
@@ -23,8 +32,10 @@ Thanks for all who is contributing with us.
   <img src="https://contrib.rocks/image?repo=vczb/gamou" />
 </a>
 
+## Contributing
+
 Be part of this amazing team, [contribute](./CONTRIBUTING.md) as well
 
-## Licence
+## License
 
-This project is licensed under the [MIT](./LICENSE) License.
+GAMOU is available under the [MIT License](./LICENSE).
