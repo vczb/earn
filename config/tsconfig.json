@@ -15,7 +15,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "app/javascript"
+    "baseUrl": "../app/javascript"
   },
-  "include": ["app/javascript"]
+  "include": ["../app/javascript"]
 }
