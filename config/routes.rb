@@ -2,12 +2,21 @@ Rails
   .application
   .routes
   .draw do
+
     scope '(:locale)',
           locale: /#{I18n.available_locales.join('|')}/,
           defaults: {
             locale: I18n.default_locale
           } do
-      root 'home#index'
+
+      constraints subdomain: /pontuei/ do
+        root 'pontuei#index', as: 'subdomain_root'  # Named root for 'app' subdomain
+        get '/*path', to: 'pontuei#index'
+      end
+
+      root 'home#index', as: 'main_root'  # Named root for main domain
+
+
       mount RailsAdmin::Engine => 'admin', :as => 'rails_admin'
       devise_for :users,
                  controllers: {
@@ -37,5 +46,7 @@ Rails
             at: '/playground',
             graphql_path: '/graphql'
       post '/graphql', to: 'graphql#execute'
+
+
     end
   end
