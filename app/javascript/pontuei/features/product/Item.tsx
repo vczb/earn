@@ -2,7 +2,8 @@ import { useCallback } from "react";
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { Diamond } from "icons";
 import { Product } from "./productSlice";
-// import styles from "./Item.module.css";
+import { styles } from "./styles";
+
 
 type ItemProps = {
   item: Product;
@@ -11,6 +12,7 @@ type ItemProps = {
 };
 
 const Item = ({ item, disabled = false, handleItemClick }: ItemProps) => {
+
   const handleClick = useCallback(
     (item) => {
       if (handleItemClick) {
@@ -22,7 +24,7 @@ const Item = ({ item, disabled = false, handleItemClick }: ItemProps) => {
 
   return (
     <Card
-      // className={disabled ? styles.disabled : ""}
+      style={disabled ? styles.disabled : {}}
       key={item.id}
       sx={{
         maxHeight: 150,

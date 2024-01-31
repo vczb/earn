@@ -15,8 +15,7 @@ import { useOnDestroy } from "hooks";
 import { Elevation, GridContainer, Wrapper } from "components";
 
 import { useTransaction } from "./transactionSlice";
-
-// import styles from "./Diamonds.module.css";
+import { styles } from "./styles";
 
 export default function Diamonds() {
   const { transaction, calcDiamonds, onPurchase, onResetRequestStatus } =
@@ -112,7 +111,7 @@ export default function Diamonds() {
                 />
               </Grid>
               <Box color={"grey.300"}
-              // className={styles.divider}
+              style={styles.divider}
               />
               <Grid
                 item

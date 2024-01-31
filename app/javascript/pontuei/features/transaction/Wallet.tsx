@@ -5,8 +5,7 @@ import { Elevation, GridContainer, Wrapper } from "components";
 import { useCustomer } from "features/customer/customerSlice";
 import { Diamond } from "icons";
 import { useNavigate } from "react-router-dom";
-
-// import styles from "./Diamonds.module.css";
+import { styles } from "./styles";
 
 export default function Wallet() {
   const { onResetCustomer, onGetWallet, customer } = useCustomer();
@@ -65,7 +64,7 @@ export default function Wallet() {
                 <Diamond />
               </Grid>
               <Box color={"grey.300"}
-              // className={styles.divider}
+              style={styles.divider}
               />
               <Grid
                 item
