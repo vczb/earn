@@ -7,14 +7,6 @@ import { useCompany } from "features/company/companySlice";
 import { useNavigate } from "react-router-dom";
 import { useOnDestroy } from "hooks";
 
-const bgImage = {
-  backgroundImage: "url(/img/onboarding-bg.png)",
-  height: "100%",
-  backgroundPosition: "bottom",
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-};
-
 export default function Onboarding() {
   const { company } = useCompany();
   const { customer, validateCPF, onResetRequestStatus } = useCustomer();
@@ -64,16 +56,6 @@ export default function Onboarding() {
         alignItems="center"
         style={{ height: "100%" }}
       >
-        <Grid item xs display={{ xs: "none", lg: "block" }} style={bgImage} />
-        <Grid
-          item
-          xs={4}
-          container
-          direction="row"
-          justifyContent="center"
-          alignItems="center"
-          sx={{ p: 2, width: "100%", minWidth: "30rem" }}
-        >
           <Elevation sx={{ p: 4 }}>
             <Typography sx={{ mb: 3 }} variant="h6">
               É muito bom ter você aqui conosco!
@@ -118,7 +100,6 @@ export default function Onboarding() {
               {company.name}
             </Typography>
           </Elevation>
-        </Grid>
       </Grid>
     </Wrapper>
   );
