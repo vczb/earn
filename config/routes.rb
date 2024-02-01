@@ -9,9 +9,9 @@ Rails
             locale: I18n.default_locale
           } do
 
-      constraints subdomain: /pontuei/ do
-        root 'pontuei#index', as: 'subdomain_root'  # Named root for 'app' subdomain
-        get '/*path', to: 'pontuei#index'
+      constraints subdomain: /app/ do
+        root 'storefront#index', as: 'subdomain_root'  # Named root for 'app' subdomain
+        get '/*path', to: 'storefront#index'
       end
 
       root 'home#index', as: 'main_root'  # Named root for main domain
