@@ -111,7 +111,7 @@ Before running the app, add custom domain mappings to your `/etc/hosts` file for
 ```
 
 echo '127.0.0.1 gamou' | sudo tee -a /etc/hosts
-echo '127.0.0.1 pontuei.gamou' | sudo tee -a /etc/hosts
+echo '127.0.0.1 app.gamou' | sudo tee -a /etc/hosts
 
 ```
 
@@ -125,7 +125,7 @@ To start the development environment for the React app along with the Rails back
 ./bin/dev
 ```
 
-This will serve the React application and the Rails API. You can access the React app in your browser at `http://pontuei.gamou:3000`.
+This will serve the React application and the Rails API. You can access the React app in your browser at `http://app.gamou:3000`.
 
 Note: Running `./bin/dev` starts both the Rails server and the esbuild process for the React app. If you wish to run only the API and the base Rails project without the React frontend, you can simply run:
 

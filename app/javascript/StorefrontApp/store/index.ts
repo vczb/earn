@@ -20,7 +20,7 @@ import transactionReducer from "features/transaction/transactionSlice";
 import productReducer from "features/product/productSlice";
 import notificationReducer from "features/notification/notificationSlice";
 
-export const persistKey = 'gamou-pontuei'
+export const persistKey = 'gamou-app'
 
 const persistConfig = {
   key: persistKey,
