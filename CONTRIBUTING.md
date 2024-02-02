@@ -1,4 +1,3 @@
-```
 # How to Contribute to Gamou
 
 Gamou is a fully open source project. See the [LICENSE](./LICENSE) file for licensing information.
@@ -115,8 +114,6 @@ echo '127.0.0.1 app.gamou' | sudo tee -a /etc/hosts
 
 ```
 
-```
-
 ### Running the Application
 
 To start the development environment for the React app along with the Rails backend, use:
@@ -135,8 +132,6 @@ rails s
 
 and access the Rails-based projects and API at `http://gamou:3000`.
 
-```
-
 ---
 
 ## Development Workflow
@@ -150,4 +145,3 @@ For VSCode users, we recommend these [extensions](https://github.com/vczb/gamou/
 ## Thank You
 
 If you have any questions, feel free to open an [issue](https://github.com/vczb/gamou/issues).
-```
