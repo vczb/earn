@@ -1,3 +1,4 @@
+import { APP_BASE_API_URL } from "utils/constants";
 import { FechResponse } from "./fetch";
 
 type TransactionResponse = {
@@ -23,7 +24,7 @@ async function purchase({
   value,
   token,
 }: PurchaseProps): Promise<FechResponse & TransactionResponse> {
-  const url = "http://localhost:3000/api/v1/" + "transaction/purchase";
+  const url = APP_BASE_API_URL + "transaction/purchase";
 
   return await fetch(url, {
     method: "POST",
@@ -48,7 +49,7 @@ async function withdrawal({
   productId,
   token,
 }: withdrawalProps): Promise<FechResponse & TransactionResponse> {
-  const url = "http://localhost:3000/api/v1/" + "transaction/withdrawal";
+  const url = APP_BASE_API_URL + "transaction/withdrawal";
 
   return await fetch(url, {
     method: "POST",

@@ -1,5 +1,6 @@
 import { CustomerState, Wallet } from "features/customer/customerSlice";
 import { FechResponse } from "./fetch";
+import { APP_BASE_API_URL } from "utils/constants";
 
 export type FindByCPFRequest = {
   cpf: string;
@@ -28,7 +29,7 @@ async function findByCPF({
   userId,
   token = "",
 }: FindByCPFRequest): Promise<FechResponse & CustomerResponse> {
-  const url = "http://localhost:3000/api/v1/" + `customer/onboarding`;
+  const url = APP_BASE_API_URL + `customer/onboarding`;
 
   return await fetch(url, {
     method: "POST",
@@ -51,7 +52,7 @@ async function register({
   userId,
   phone,
 }: RegisterOrEditRequest): Promise<FechResponse & CustomerResponse> {
-  const url = "http://localhost:3000/api/v1/" + `customer/register`;
+  const url = APP_BASE_API_URL + `customer/register`;
 
   return await fetch(url, {
     method: "POST",
@@ -74,7 +75,7 @@ async function edit({
   userId,
   phone,
 }: RegisterOrEditRequest): Promise<FechResponse & CustomerResponse> {
-  const url = "http://localhost:3000/api/v1/" + `customer/edit`;
+  const url = APP_BASE_API_URL + `customer/edit`;
 
   return await fetch(url, {
     method: "PUT",
@@ -94,7 +95,7 @@ async function getWallet({
   userId,
   customerId,
 }: GetWalletRequest): Promise<FechResponse & WalletResponse> {
-  const url = "http://localhost:3000/api/v1/" + `customer/wallet`;
+  const url = APP_BASE_API_URL + `customer/wallet`;
 
   const query = `?user_id=${userId}&customer_id=${customerId}`;
 

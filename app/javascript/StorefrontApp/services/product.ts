@@ -1,3 +1,4 @@
+import { APP_BASE_API_URL } from "utils/constants";
 import { FechResponse } from "./fetch";
 
 type Product = {
@@ -25,7 +26,7 @@ async function list({
   userId,
   token,
 }: ProductRequest): Promise<FechResponse & ProductResponse> {
-  const url = "http://localhost:3000/api/v1/" + "product/list";
+  const url = APP_BASE_API_URL + "product/list";
 
   const query = `?user_id=${userId}`;
 
