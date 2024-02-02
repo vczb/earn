@@ -57,7 +57,7 @@ export default function Auth() {
             }}
           >
             <Typography component="h1" variant="h2" color={"primary.dark"}>
-              PONTUEI
+              GAMOU
             </Typography>
             <Avatar sx={{ m: 1, bgcolor: "primary.dark" }}>
               <LockOutlinedIcon />
