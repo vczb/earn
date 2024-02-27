@@ -13,7 +13,7 @@ A traditional Rails application that forms the backbone for essential features l
 - [Rails Admin](https://github.com/sferik/rails_admin) - Easy-to-use admin interface.
 - [RSpec](https://github.com/rspec/rspec-rails) - For reliable testing.
 - [Devise](https://github.com/heartcombo/devise) - Robust authentication solution.
-- _[More...](https://github.com/vczb/gamou/wiki/What-is-inside%3F)_
+- _[More...](https://github.com/vczb/gamou/wiki/Storefront-App)_
 
 ### Storefront App
 
