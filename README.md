@@ -1,4 +1,4 @@
-# Gamou
+# GAMOU
 
 Boost your business with Gamou, an entirely open-source platform designed to scale and innovate.
 
