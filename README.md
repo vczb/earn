@@ -28,7 +28,7 @@ Deployed as a standalone system at app.gamou, this SPA uses ESBuild to efficient
 
 ## Contributors
 
-A heartfelt thank you to all our contributors! We value every contribution, big or small, and believe every contributor helps make GAMOU better.
+A heartfelt thank you to all our contributors! We value every contribution, big or small, and believe every contributor helps make Gamou better.
 
 <a href="https://github.com/vczb/gamou/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=vczb/gamou" />
@@ -36,8 +36,8 @@ A heartfelt thank you to all our contributors! We value every contribution, big 
 
 ## Contributing
 
-Whether you're a seasoned developer or just starting out, we welcome you to join our amazing community. See [how to contribute](./CONTRIBUTING.md) and help us make GAMOU even better.
+Whether you're a seasoned developer or just starting out, we welcome you to join our amazing community. See [how to contribute](./CONTRIBUTING.md) and help us make Gamou even better.
 
 ## License
 
-GAMOU is released under the [MIT License](./LICENSE).
+Gamou is released under the [MIT License](./LICENSE).
