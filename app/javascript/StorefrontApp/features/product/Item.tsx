@@ -40,7 +40,7 @@ const Item = ({ item, disabled = false, handleItemClick }: ItemProps) => {
         }}
         component="img"
         image={item.image}
-        alt={`Product ${item.image}`}
+        alt={`${item.name} product image`}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
