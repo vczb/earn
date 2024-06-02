@@ -12,7 +12,6 @@ type ItemProps = {
 };
 
 const Item = ({ item, disabled = false, handleItemClick }: ItemProps) => {
-
   const handleClick = useCallback(
     (item) => {
       if (handleItemClick) {
@@ -41,7 +40,7 @@ const Item = ({ item, disabled = false, handleItemClick }: ItemProps) => {
         }}
         component="img"
         image={item.image}
-        alt="green iguana"
+        alt={`Product ${item.image}`}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
