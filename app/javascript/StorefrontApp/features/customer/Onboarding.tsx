@@ -48,7 +48,7 @@ export default function Onboarding() {
   });
 
   return (
-    <Wrapper fullVH>
+    <Wrapper fullVH showLogout>
       <Grid
         container
         direction="row"
