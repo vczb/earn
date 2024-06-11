@@ -7,7 +7,7 @@ module Types
     field :email, String
     field :phone, String
     field :gender, Integer
-    field :cpf, String
+    field :dni, String
     field :birthday, GraphQL::Types::ISO8601Date
     field :user_id, Integer, null: false
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false

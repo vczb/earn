@@ -3,7 +3,7 @@ import { FechResponse } from "./fetch";
 import { APP_BASE_API_URL } from "utils/constants";
 
 export type FindByCPFRequest = {
-  cpf: string;
+  dni: string;
   userId: string;
   token: string;
 };
@@ -25,7 +25,7 @@ type CustomerResponse = Omit<CustomerState, "requestStatus" | "errorMessage">;
 type WalletResponse = Wallet;
 
 async function findByCPF({
-  cpf,
+  dni,
   userId,
   token = "",
 }: FindByCPFRequest): Promise<FechResponse & CustomerResponse> {
@@ -37,7 +37,7 @@ async function findByCPF({
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-    body: JSON.stringify({ cpf, user_id: userId }),
+    body: JSON.stringify({ dni, user_id: userId }),
   })
     .then((res) => res.json())
     .then((res) => res)
@@ -46,7 +46,7 @@ async function findByCPF({
 
 async function register({
   token,
-  cpf,
+  dni,
   name,
   email,
   userId,
@@ -60,7 +60,7 @@ async function register({
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-    body: JSON.stringify({ user_id: userId, cpf, name, phone, email }),
+    body: JSON.stringify({ user_id: userId, dni, name, phone, email }),
   })
     .then((res) => res.json())
     .then((res) => res)
@@ -69,7 +69,7 @@ async function register({
 
 async function edit({
   token,
-  cpf,
+  dni,
   name,
   email,
   userId,
@@ -83,7 +83,7 @@ async function edit({
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-    body: JSON.stringify({ user_id: userId, cpf, name, phone, email }),
+    body: JSON.stringify({ user_id: userId, dni, name, phone, email }),
   })
     .then((res) => res.json())
     .then((res) => res)

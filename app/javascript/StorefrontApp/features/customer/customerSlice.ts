@@ -14,7 +14,7 @@ export type CustomerState = {
   requestStatus?: "idle" | "pending" | "fulfilled" | "rejected";
   id: string;
   email: string;
-  cpf: string;
+  dni: string;
   name: string;
   phone: string;
   errorMessage?: string;
@@ -24,7 +24,7 @@ export type CustomerState = {
 const initialState: CustomerState = {
   id: "",
   email: "",
-  cpf: "",
+  dni: "",
   name: "",
   phone: "",
   errorMessage: "",
@@ -43,12 +43,12 @@ const register = createAsyncThunk(
 
     const token = state.company.jwt as string;
     const userId = state.company.id;
-    const cpf = state.customer.cpf;
+    const dni = state.customer.dni;
 
     const data = await customerService.register({
       token,
       email,
-      cpf,
+      dni,
       userId,
       name,
       phone,
@@ -73,14 +73,14 @@ const edit = createAsyncThunk(
 
     const token = state.company.jwt as string;
     const userId = state.company.id;
-    const cpf = state.customer.cpf;
+    const dni = state.customer.dni;
 
     console.log("editing");
 
     const data = await customerService.edit({
       token,
       email,
-      cpf,
+      dni,
       userId,
       name,
       phone,
@@ -125,7 +125,7 @@ const getWallet = createAsyncThunk("customer/wallet", async (_, thunkAPI) => {
 
 const findByCPF = createAsyncThunk(
   "customer/onboarding",
-  async (cpf: string, thunkAPI) => {
+  async (dni: string, thunkAPI) => {
     const state = thunkAPI.getState() as RootState;
 
     const token = state.company.jwt as string;
@@ -137,7 +137,7 @@ const findByCPF = createAsyncThunk(
     }
 
     const payload = {
-      cpf,
+      dni,
       userId: userId.padStart(2, "0"),
     };
 
@@ -149,7 +149,7 @@ const findByCPF = createAsyncThunk(
       });
     }
 
-    if (!data?.id && data?.cpf) {
+    if (!data?.id && data?.dni) {
       return await thunkAPI.dispatch(setNewCustomer(data));
     }
 
@@ -166,7 +166,7 @@ const customerSlice = createSlice({
     setCustomer: (state, action) => {
       state.id = String(action.payload.id);
       state.email = action.payload.email;
-      state.cpf = action.payload.cpf;
+      state.dni = action.payload.dni;
       state.name = action.payload.name;
       state.phone = action.payload.phone;
     },
@@ -175,7 +175,7 @@ const customerSlice = createSlice({
       state.wallet = action.payload;
     },
     setNewCustomer: (state, action) => {
-      state.cpf = action.payload.cpf;
+      state.dni = action.payload.dni;
       return state;
     },
     resetCustomer: (state) => {
@@ -252,11 +252,11 @@ export function useCustomer() {
   const dispatch = useAppDispatch();
   const customer = useAppSelector((state) => state.customer);
 
-  const validateCPF = (cpf: string) =>
+  const validateCPF = (dni: string) =>
     // eslint-disable-next-line no-useless-escape
-    new RegExp(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/).test(cpf);
+    new RegExp(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/).test(dni);
 
-  const onFindByCPF = (cpf: string) => dispatch(findByCPF(cpf));
+  const onFindByCPF = (dni: string) => dispatch(findByCPF(dni));
   const onResetCustomer = () => dispatch(resetCustomer());
   const onRegister = (data: CustomerRequestProps) => dispatch(register(data));
   const onGetWallet = () => dispatch(getWallet());

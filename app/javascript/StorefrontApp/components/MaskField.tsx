@@ -5,7 +5,7 @@ import InputMask from "react-input-mask";
 
 type MaskFieldProps = {
   maskValue?: string;
-  mask?: "cpf" | "phone";
+  mask?: "dni" | "phone";
 } & TextFieldProps;
 
 const MaskField = ({ maskValue, mask, ...props }: MaskFieldProps) => {
@@ -13,7 +13,7 @@ const MaskField = ({ maskValue, mask, ...props }: MaskFieldProps) => {
     switch (mask) {
       case "phone":
         return "+99 (99) 99999-9999";
-      case "cpf":
+      case "dni":
       default:
         return "999.999.999-99";
     }

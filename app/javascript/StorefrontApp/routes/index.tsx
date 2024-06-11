@@ -22,7 +22,7 @@ export default function AppRoutes() {
           <Route path="/" element={<Onboarding />} />
           <Route
             element={
-              <Protected isAllowed={!!customer.cpf?.length} redirectTo={"/"} />
+              <Protected isAllowed={!!customer.dni?.length} redirectTo={"/"} />
             }
           >
             <Route path="/customer/new" element={<Register />} />

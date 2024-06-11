@@ -5,7 +5,7 @@ class CreateCustomers < ActiveRecord::Migration[6.1]
       t.string :email
       t.string :phone
       t.integer :gender
-      t.string :cpf
+      t.string :dni
       t.date :birthday
       t.references :user, null: false, foreign_key: true
 

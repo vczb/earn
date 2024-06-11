@@ -4,5 +4,5 @@ class Customer < ApplicationRecord
 
   enum gender: %i[male female other]
 
-  validates :cpf, :user_id, presence: true
+  validates :dni, :user_id, presence: true
 end

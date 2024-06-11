@@ -59,7 +59,7 @@ RailsAdmin.config do |config|
       field :email
       field :phone
       field :gender
-      field :cpf
+      field :dni
       field :birthday
       field :user
     end
@@ -68,7 +68,7 @@ RailsAdmin.config do |config|
       field :email
       field :phone
       field :gender
-      field :cpf
+      field :dni
       field :birthday
       field :user
     end
@@ -77,7 +77,7 @@ RailsAdmin.config do |config|
       field :email
       field :phone
       field :gender
-      field :cpf
+      field :dni
       field :birthday
       field :user
     end

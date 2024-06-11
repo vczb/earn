@@ -12,7 +12,7 @@ type FormProps = {
 
 const Form = ({ onCancel, onSubmit }: FormProps) => {
   const { customer, onResetRequestStatus } = useCustomer();
-  const { cpf, email, name, phone, requestStatus, errorMessage } = customer;
+  const { dni, email, name, phone, requestStatus, errorMessage } = customer;
 
   useOnDestroy(() => {
     onResetRequestStatus();
@@ -69,7 +69,7 @@ const Form = ({ onCancel, onSubmit }: FormProps) => {
               disabled: true,
             }}
             label={"CPF"}
-            maskValue={cpf}
+            maskValue={dni}
             error={requestStatus === "rejected"}
             helperText={errorMessage}
           />

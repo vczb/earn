@@ -6,13 +6,13 @@ module Api
       # POST /customers/onboarding
       def onboarding
         @customer =
-          Customer.find_by(cpf: params[:cpf], user_id: params[:user_id])
+          Customer.find_by(dni: params[:dni], user_id: params[:user_id])
 
         if @customer.present?
           render json: @customer
         else
           render json: {
-                   cpf: params[:cpf],
+                   dni: params[:dni],
                    message: 'Customer not found'
                  },
                  status: :not_found
@@ -25,9 +25,9 @@ module Api
           @customer = Customer.new(register_params)
 
           id = register_params[:user_id].rjust(2, '0')
-          cpf = register_params[:cpf].gsub(/[^0-9]/, '')
+          dni = register_params[:dni].gsub(/[^0-9]/, '')
 
-          @customer.uid = "#{id}#{cpf}"
+          @customer.uid = "#{id}#{dni}"
 
           if @customer.save
             render json: @customer
@@ -48,8 +48,8 @@ module Api
       def edit
         begin
           id = register_params[:user_id].rjust(2, '0')
-          cpf = register_params[:cpf].gsub(/[^0-9]/, '')
-          uid = "#{id}#{cpf}"
+          dni = register_params[:dni].gsub(/[^0-9]/, '')
+          uid = "#{id}#{dni}"
 
           @customer = Customer.find_by(uid: uid)
 
@@ -60,7 +60,7 @@ module Api
           else
             render json: {
                      message: 'Customer not found',
-                     cpf: params[:cpf]
+                     dni: params[:dni]
                    },
                    status: :not_found
           end
@@ -102,15 +102,15 @@ module Api
       private
 
       def onboarding_params
-        params.permit(:cpf, :user_id)
+        params.permit(:dni, :user_id)
       end
 
       def register_params
-        params.permit(:cpf, :user_id, :name, :email, :phone, :user_id)
+        params.permit(:dni, :user_id, :name, :email, :phone, :user_id)
       end
 
       def edit_params
-        params.permit(:cpf, :user_id, :name, :email, :phone, :user_id)
+        params.permit(:dni, :user_id, :name, :email, :phone, :user_id)
       end
 
       def wallet_params

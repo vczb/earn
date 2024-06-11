@@ -20,15 +20,15 @@ export default function Onboarding() {
 
     const data = new FormData(e.currentTarget);
 
-    const cpf = data?.get("cpf")?.toString() || "";
+    const dni = data?.get("dni")?.toString() || "";
 
-    const isValid = validateCPF(cpf);
+    const isValid = validateCPF(dni);
 
     if (!isValid) {
       return;
     }
 
-    onFindByCPF(cpf);
+    onFindByCPF(dni);
   };
 
   useEffect(() => {
@@ -77,7 +77,7 @@ export default function Onboarding() {
                 helperText={customer.errorMessage}
                 label="CPF"
                 placeholder="CPF"
-                name="cpf"
+                name="dni"
                 required
               />
 
