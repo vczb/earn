@@ -13,7 +13,7 @@ A traditional Rails application that forms the backbone for essential features l
 - [Rails Admin](https://github.com/sferik/rails_admin) - Easy-to-use admin interface.
 - [RSpec](https://github.com/rspec/rspec-rails) - For reliable testing.
 - [Devise](https://github.com/heartcombo/devise) - Robust authentication solution.
-- _[More...](https://github.com/vczb/gamou/wiki/Storefront-App)_
+- _[More...](https://github.com/vczb/gamou/wiki/What-is-inside%3F)_
 
 ### Storefront App
 
@@ -24,7 +24,7 @@ Deployed as a standalone system at app.gamou, this SPA uses ESBuild to efficient
 - [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview) - For seamless navigation.
 - [Material-UI](https://material-ui.com/) - For modern, component-based design.
 - [TypeScript](https://www.typescriptlang.org/) - Adds type safety to enhance development.
-- _[More...](https://github.com/vczb/gamou/wiki/Pontuei-React-App)_
+- _[More...](https://github.com/vczb/gamou/wiki/Storefront-App)_
 
 ## Contributors
 
