@@ -37,7 +37,7 @@ gem 'devise'
 gem 'simple_form'
 
 # https://github.com/sferik/rails_admin
-gem 'rails_admin', '~> 3.1'
+gem 'rails_admin', '~> 3.2'
 
 gem 'jwt'
 gem 'bcrypt'
