@@ -1,6 +1,6 @@
-# GAMOU
+# Gamification
 
-Boost your business with Gamou, an entirely open-source platform designed to scale and innovate.
+Boost your business with Gamification, an entirely open-source platform designed to scale and innovate.
 
 ## Technology Stack
 
@@ -30,8 +30,8 @@ Deployed as a standalone system at app.gamou, this SPA uses ESBuild to efficient
 
 A heartfelt thank you to all our contributors! We value every contribution, big or small, and believe every contributor helps make Gamou better.
 
-<a href="https://github.com/vczb/gamou/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=vczb/gamou" />
+<a href="https://github.com/vczb/gamification/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=vczb/gamification" />
 </a>
 
 ## Contributing
