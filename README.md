@@ -1,6 +1,6 @@
-# Gamification
+# Earn
 
-Boost your business with Gamification, an entirely open-source platform designed to scale and innovate.
+Boost your business with Earn, an entirely open-source platform designed to scale and innovate.
 
 ## Technology Stack
 
